@@ -1,7 +1,7 @@
 ### Enfileirando items
 Uma fila é uma sequência como uma lista, mas a entrada ocorre por uma ponta e a saída por outra.
 
->[!example] A fila obedece a regra FIFO: O primeiro a entrar é o primeiro a sair.
+>[!IMPORTANT] A fila obedece a regra FIFO: O primeiro a entrar é o primeiro a sair.
 
 ### Aplicações
 - Filas de espera

@@ -1,7 +1,7 @@
 Um algoritmo deve ser correto e terminar.
 A sequência de instruções pode estar correta, mas ela se encerra?
 
->[!example] Algoritmo
+>[!IMPORTANT] Algoritmo
 >Um algoritmo é uma sequência finita de passos, descritas de forma não ambígua que realiza a operação desejada.
 
 Os recursos necessários são tempo e memória!
@@ -62,7 +62,7 @@ $$
 Essa notação nos diz que, começando com um determinado n inicial, a função $f(n)$ (nosso algoritmo) ficará abaixo (ou junto) da função $g(n)$ (função que estamos comparando).
 $g(n)$ é o limite superior. 
 
->[!example] Big O -> Pior caso de execução
+>[!IMPORTANT] Big O -> Pior caso de execução
 
   
 #### Omega
@@ -80,7 +80,7 @@ $$
 Essa notação nos diz que, começando com um determinado n inicial, a função $f(n)$ (nosso algoritmo) ficará acima (ou junto) da função $g(n)$ (função que estamos comparando).
 $g(n)$ é o limite inferior.
 
->[!example] Omega -> Melhor caso de execução
+>[!IMPORTANT] Omega -> Melhor caso de execução
 
 
 #### Theta
@@ -104,7 +104,7 @@ Analisar bibliotecas de terceiros que estejam sendo usadas no código é uma tar
 
 Em funções que possuem constantes, as constantes devem ser "ignoradas" -> prevalece o termo de maior grau.
 
->[!tip] Ignorando constantes
+>[!IMPORTANT] Ignorando constantes
 >A análise de algoritmos trata de casos onde n é MUITO alto, então as constante são praticamente despreziveis.
 
 

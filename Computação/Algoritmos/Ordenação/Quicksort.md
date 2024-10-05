@@ -20,7 +20,7 @@ O retorno da partição é o local correto do pivô.
 Antes de iniciar o processo, deve-se "escolher" um valor pivô. 
 Esse valor será a base para as trocas e comparações.
 
->[!example] Escolha do pivô
+>[!IMPORTANT] Escolha do pivô
 >Até aqui, a escolha pode ser "aleatória", mas existem melhorias (ver abaixo)
 
 -> Assumindo que o pivô é o meio do vetor!

@@ -16,7 +16,7 @@ Montar a placa envolve combinar todas as possibilidades de números e letras.
 - Números podem ser repetidos (0-9)
 Assim, obtemos algo como: $26⁴*10³$ possibilidades diferentes.
 
->[!tip] O método das caixinhas é realmente útil!
+>[!IMPORTANT] O método das caixinhas é realmente útil!
 
 
 ### Uma equação para isso

@@ -14,7 +14,7 @@ Em listas, as operações mais frequentes são inserção, remoção e busca.
 
 Além disso, pode-se ordenar a lista, combinar duas listas, etc...
 
->[!example] Listas ordenadas
+>[!IMPORTANT] Listas ordenadas
 >Em casos de listas ordenadas, o processo de inserção deve ser diferente!
 
 

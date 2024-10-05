@@ -125,7 +125,7 @@ Diferentemente de vetores*, as matrizes possuem tamanho fixo, sempre com element
 Uma vez declarada, a matriz NÃO pode ser alterada.
 -> matrizes são alocadas na **stack**.
 
->[!tip] Vetores
+>[!IMPORTANT] Vetores
 >Em Rust, um vetor está definido na biblioteca padrão. Uma matriz é diferente de um vetor.
 
 Os casos de uso da matriz podem ser bem específicos, então, se houver dúvida, use vetores.

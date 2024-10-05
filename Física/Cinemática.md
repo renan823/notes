@@ -28,7 +28,7 @@ A velocidade era vista anteriormente como uma fórmula simples: $\frac{\Delta S}
 A manipulação e entendimento da velocidade se tornou algo mais robusto (e talvez complexo).
 A velocidade, assim como a posição, é um vetor formado por componentes que descrevem o movimento em cada eixo.
 
->[!example] O vetor velocidade é sempre perpendicular (reta tangente) ao vetor posição.
+>[!IMPORTANT] O vetor velocidade é sempre perpendicular (reta tangente) ao vetor posição.
 
 Assim como na posição, a velocidade irá depender não somente do parâmetro $t$, mas do vetor posição em si.
 **O vetor velocidade é composto, na verdade, pela derivada de cada componente do vetor posição!**

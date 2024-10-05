@@ -11,7 +11,7 @@ A busca é operação melhorada com esse método.
 Para buscar, basta inserir a chave de busca como o valor do sentinela.
 Agora, percorremos a lista toda verificando se o elemento atual (valor do nó) é igual à chave desejada. 
 
->[!example] A chave SEMPRE será encontrada, uma vez que ela existe no sentinela.
+>[!IMPORTANT] A chave SEMPRE será encontrada, uma vez que ela existe no sentinela.
 
 Ao finalizar o laço, basta verificar se o nó que possui o resultado é igual ao sentinela. Se a comparação for verdadeira, então a chave indicado não existe na lista. Em caso contrário, o item foi encontrado. 
 Essa verificação indica que percorremos toda a lista e voltamos ao sentinela. Nesse caso, o item só existe no sentinela, sendo a própria chave de busca.

@@ -17,7 +17,7 @@ Escondendo os dados e mostrando apenas a interface (funções), um TAD permite q
 É necessário criar um arquivo de interface (.h) e o arquivo da implementação (.c)
 Separando os arquivos, apenas aquilo que está definido na interface poderá ser acessado (uma função implementada no .c que não está no .h não será acessada por fora!)
 
->[!example] Ponteiro Opaco
+>[!IMPORTANT] Ponteiro Opaco
 >Em C, não existem TADs que não são ponteiros  opacos!  Sem o ponteiro opaco, a regra principal de encapsulamento seria quebrada.
 
 
