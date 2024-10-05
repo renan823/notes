@@ -10,3 +10,5 @@ As operações continuam equivalentes às [[Listas Sequenciais]] (ou seja, a int
 ### Funcionamento
 A lista pode estar ordenada ou não, o que afeta as funções de busca, inserção e remoção.
 Ao criar o [[TAD]] nó, deve-se alterar suas propriedades, colocando os campos de anterior e próximo.
+
+### Implementação em C
