@@ -5,7 +5,7 @@ O primeiro passo é construir um heap máximo no forma de vetor desordenado.
 Com o vetor colocado, basta trocar (swap) o primeiro elemento com o último.
 Após o procedimento, diminua o tamanho da heap (isso evita acessar posições já ordenadas).
 
->[!IMPORTANT] Ordem errada
+>[!example] Ordem errada
 >Perceba que ao trocar os valores a chance de estar com uma heap errônea é grande.
 >Então, após cada troca, é necessário reorganizar a heap. Essa ação move um nó para baixo caso ele seja menor que algum dos filhos. É sempre importante olhar o maior dos filhos e então realizar a troca (quando necessário).
 
@@ -14,11 +14,11 @@ O funcionamento do algoritmo é repetido, sempre realizando a troca da raiz (roo
 -> É necessário construir a heap (dado um vetor, construa uma heap)
 -> É necessário rearranjar a heap (dado um índice, coloque o item em sua posição correta)
 
->[!IMPORTANT] Rearranjar 
+>[!example] Rearranjar 
 >Dado um certo nó, deve-se analisar seus filhos e encontrar o maior entre eles. Se o maior não for o próprio nó, então a substituição deve ocorrer. Use o processo recursivamente até que nó = maior
 
 
->[!IMPORTANT] Construir
+>[!example] Construir
 >O processo de construção da heap é relativamente simples. Dado um vetor, use o método algébrico para encontrar as folhas. Basta ignorar as folhas e usar todos os elementos restantes. Começando do último item, chame a função de rearranjar para cada item.
 
 

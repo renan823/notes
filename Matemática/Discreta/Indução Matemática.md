@@ -15,7 +15,7 @@ Dado um caso base (que funciona), deve-se provar que é válido para todo $n$.
 
 Prove que:
 ## $$2⁰+2¹+2²+...+2^n = 2^n -1 $$
->[!IMPORTANT] Premissa básica
+>[!Example] Premissa básica
 Dizer que se A ocorrer B também ocorre não significa que algum caso exista.
 "Todas as araras da sala são mamíferos" -> Em algum momento foi dito que existe uma arara na sala?
 

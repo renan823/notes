@@ -2,7 +2,7 @@
 O funcionamento da pilha envolve colocar e retirar coisas do topo!
 Empilhar objetos! A ordem de entrada e saída é muito importante.
 
->[!IMPORTANT] A pilha obedece a regra LIFO: O último a entrar é o primeiro a sair!
+>[!example] A pilha obedece a regra LIFO: O último a entrar é o primeiro a sair!
 
 ### Aplicações
 - Histórico de navegador

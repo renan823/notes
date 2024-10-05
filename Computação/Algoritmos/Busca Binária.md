@@ -1,7 +1,7 @@
 Talvez um dos melhores métodos de busca.
 Foca em dividir o vetor para encontrar o item desejado.
 
->[!IMPORTANT] O VETOR PRECISA ESTAR ORDENADO!
+>[!EXAMPLE] O VETOR PRECISA ESTAR ORDENADO!
 
 ### Funcionamento
 Dado um vetor com $n$ elementos, encontre o item $k$ e retorne sua posição.
