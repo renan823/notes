@@ -1,0 +1,34 @@
+**não revisado**
+
+TEA - Transtorno do espectro autista
+- problemas em interpretar sentidos (sensoriais) 
+- exemplo da microfonia (é péssimo para nós, além de contar com outras formas de incomodo)
+- o incomodo pode apagar o cérebro (como uma pane elétrica em avião) shutdown/meltdown
+- o autista apresenta problemas no sistema límbico (percepções)
+- necessidade de ajuda em momentos de shutdown/meltdown
+- falta o desconfiometro no autista
+- autistas apresentam frouxidão ligamentar 
+- uma ação só será parada quando o autista sentir que deve parar -> ação tem um propósito
+- e como parar uma crise? HIPERFOCO -> o autista gosta de algo e consegue se focar muito naquilo
+- em momentos de crise o cérebro dá "bug" 
+- autista não consegue entender emoções (por exemplo a questão da agresividade, não é natural, apenas umas questão de não conseguir interpretar os ocorridos)
+- hiperatividade cerebral
+- se não é vivenciado não é aprendido
+- ao não ajudar, gera-se um sentimento de incompreensão 
+- o autista pode optar pelo suicídio
+- os autistas recebem todos os sentidos ao mesmo tempo -> sobrecarga
+- dificuldade em separar emoções
+- mudanças de rotina possivelmente ocasionam uma crise
+- existem locais que possibilitam (todos deveriam) uma acessibilidade para o autista
+- o autista não tem cara, não é frescura
+- a existência de mais neuronios no cerebro neuroatipico captam mais intensamente o sinais 
+- respostas a estímulos se dão por agressividade
+- um abraço pode ajudar em um momento de crise, retirando também o autista do local que gerou a crise
+- colar de girassol? Deficiência invisível
+- busca por um momento de regulação (como girar no mesmo lugar)
+- abraçar durante crises
+- conhece o autista? Use dos interesses dele para retira-lo da crise (uso do hiperfoco)
+- uso de psicoterapia e terapia ocupacional
+- pensamento rígido não passa na cabeça do autista (como programas de ios em android)
+- para casos onde não conhecemos o autista devemos retira-lo do local
+- mostrar apoio e falas de apoio
