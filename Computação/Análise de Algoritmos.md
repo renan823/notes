@@ -53,11 +53,7 @@ A função $O(f(n))$ é a "big oh" da nossa função.
 
 Nesse caso, é valido dizer que o algoritmo é $O(f(n))$ se existe uma constante e um n inicial maiores que 0.
 
-$$
-
-T(n) = O(f(n)) \space \space T(n) \le cf(n)
-
-$$
+$$T(n) = O(f(n)) \space \space T(n) \le cf(n)$$
 
 Essa notação nos diz que, começando com um determinado n inicial, a função $f(n)$ (nosso algoritmo) ficará abaixo (ou junto) da função $g(n)$ (função que estamos comparando).
 $g(n)$ é o limite superior. 
@@ -71,11 +67,7 @@ A função $\Omega(f(n))$ é a "ômega" da nossa função.
 
 Nesse caso, é valido dizer que o algoritmo é $\Omega(f(n))$ se existe uma constante e um inicial maiores que 0.
 
-$$
-
-T(n) = \Omega(f(n)) \space \space T(n) \ge cf(n)
-
-$$
+$$T(n) = \Omega(f(n)) \space \space T(n) \ge cf(n)$$
 
 Essa notação nos diz que, começando com um determinado n inicial, a função $f(n)$ (nosso algoritmo) ficará acima (ou junto) da função $g(n)$ (função que estamos comparando).
 $g(n)$ é o limite inferior.
@@ -87,11 +79,7 @@ $g(n)$ é o limite inferior.
 A função $T(n)$ representa o algoritmo.
 A função $\Theta(f(n))$ é a "theta" da nossa função.
 
-$$
-
-T(n) = \Theta(f(n)) \space \space T(n) = cf(n)
-
-$$
+$$T(n) = \Theta(f(n)) \space \space T(n) = cf(n)$$
 
 Essa notação nos diz que, começando com um determinado n inicial, a função $f(n)$ (nosso algoritmo) ficará junto da função $g(n)$ (função que estamos comparando)
 
