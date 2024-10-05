@@ -1,7 +1,7 @@
 Um algoritmo deve ser correto e terminar.
 A sequência de instruções pode estar correta, mas ela se encerra?
 
->[!IMPORTANT] Algoritmo
+> [!IMPORTANT] Algoritmo
 >Um algoritmo é uma sequência finita de passos, descritas de forma não ambígua que realiza a operação desejada.
 
 Os recursos necessários são tempo e memória!
