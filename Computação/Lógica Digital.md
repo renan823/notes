@@ -6,7 +6,7 @@ Uma vez feito, é pra estar configurado (forever)
 
 Crie seu circuito e rode a compilação.
 Com a compilação concluída (e sem erros), crie um arquivo de WaveForm.
-Vá em file -> new -> university wave form.
+Vá em file -> new -> universal wave form.
 A tela nova será aberta.
 
 Clique na barra lateral e insert nodes. Selecionar os nós desejados.

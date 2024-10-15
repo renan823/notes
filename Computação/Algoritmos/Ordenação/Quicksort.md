@@ -32,8 +32,6 @@ O segundo "i" começa fora do vetor, e só é alterado quando valor na posição
 Quando o valor na posição j é menor que o pivô, além de modificar o índice i, o algoritmo deve trocar (swap) os valores de posição.
 Ao fim da iteração, todos os valores menor que o pivô estarão à esquerda e os maiores à direita. (ISSO NÃO SIGNIFICA QUE ESTÃO EM ORDEM!)
 
-
-
 ### Complexidade
 O algoritmo é recursivo, então deve-se criar uma **árvore de recursão**.
 Nesse caso, cada nível possui um custo!
