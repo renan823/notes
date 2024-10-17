@@ -3,8 +3,6 @@
 Pode ser descrito usando o **momento** $\vec{p}$ e a posição $\vec{r}$.
 
 ### $$\vec{L} = \vec{r} \times \vec{p}$$
-O que interessa, na verdade, é 
-
 
 ### Momento Angular
 
