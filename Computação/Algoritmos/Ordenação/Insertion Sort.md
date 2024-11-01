@@ -1,4 +1,4 @@
-O insertion sort é um método de [[Ordenação]] muito intuitivo, que têm como principal processo inserir (realizando trocas) o elemento em sua posição final.
+O insertion sort é um método de [[Ordenação de Dados]] muito intuitivo, que têm como principal processo inserir (realizando trocas) o elemento em sua posição final.
 
 ### Funcionamento
 Muito similar ao [[Bubble Sort]], este algoritmo flutua os valores para o início do vetor, garantindo que na iésima iteração o elemento na posição "i" esteja em seu lugar.

@@ -1,4 +1,4 @@
-Talvez um dos melhores métodos de busca.
+Talvez um dos melhores métodos de [[Busca de Dados]].
 Foca em dividir o vetor para encontrar o item desejado.
 
 >[!EXAMPLE] O VETOR PRECISA ESTAR ORDENADO!

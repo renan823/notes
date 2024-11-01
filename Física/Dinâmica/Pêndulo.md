@@ -3,6 +3,8 @@ O pêndulo é um ótimo experimento (que pode, inclusive, ser feito no conforto 
 Um pêndulo consiste em um objeto (partícula, bola, vaca esférica...) pendurado por uma haste **não flexível** em uma superfície plana e fixa.
 Em estado inicial, o pêndulo encontra-se imóvel. Mas, com um empurrão/peteleco, o mesmo irá se mover na direção da força aplicada. Entretanto, o movimento gerado não será infinito, pelo contrário, a resistência do ar (aqui chamada de força viscosa), irá atuar contra o movimento, reduzindo sua velocidade. 
 
+-> Também pode ser descrito como um [[Oscilador Harmônico]]
+
 ### Eixos
 Para trabalhar de forma confortável com as (futuras) [[Equações Diferenciais Ordinárias]] do pêndulo, precisamos entender quais suas componentes e como elas irão se comportar durante o movimento.
 

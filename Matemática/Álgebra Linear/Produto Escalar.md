@@ -1,6 +1,6 @@
 
 ### O que é?
-O produto escalar representa a projeção de um vetor em outro. Como o nome sugere, o resultado da operação é um valor escalar.
+É uma operação entre [[Vetores]] que resulta na projeção de um sobre o outro. Como o nome sugere, o resultado é um valor escalar.
 
 ### Equação
 ## $$\vec{u}*\vec{v} = ||\vec{u}||*||\vec{v}||*cos(\theta)$$

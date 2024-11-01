@@ -1,4 +1,4 @@
-Após entendermos como chegar em uma derivada usando limites, é hora de facilitar a vida.
+Após entendermos como chegar em [[Derivadas]] utilizando [[Limites]], é hora de facilitar a vida.
 Existe um conjunto com algumas derivadas essenciais, que devem ser guardadas com carinho.
 
 >[!Example] Derivada da constante (sempre 0)

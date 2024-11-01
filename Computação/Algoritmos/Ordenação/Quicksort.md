@@ -1,4 +1,4 @@
-O quicksort é um método de [[Ordenação]] que apresenta algumas melhorias em relação ao [[Bubble Sort]].
+O quicksort é um método de [[Ordenação de Dados]] que apresenta algumas melhorias em relação ao [[Bubble Sort]].
 
 ### Ideia básica
 O algoritmo funciona por particionamentos, ou seja, criando subvetores.

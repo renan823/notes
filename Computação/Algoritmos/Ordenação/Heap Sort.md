@@ -1,4 +1,4 @@
-O heap sort é um método de [[Ordenação]] muito eficiente, que aproveita da estrutura de  [[Heap]] (máxima) para ordenar seus valores.
+O heap sort é um método de [[Ordenação de Dados]] muito eficiente, que aproveita da estrutura de  [[Heap]] (máxima) para ordenar seus valores.
 
 ### Funcionamento
 O primeiro passo é construir um heap máximo no forma de vetor desordenado.

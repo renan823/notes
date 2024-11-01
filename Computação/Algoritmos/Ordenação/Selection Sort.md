@@ -1,4 +1,4 @@
-O selection sort (ou ordenação por seleção) é um método de [[Ordenação]] muito semelhante ao [[Bubble Sort]].
+O selection sort (ou ordenação por seleção) é um método de [[Ordenação de Dados]] muito semelhante ao [[Bubble Sort]].
 A ação que difere é a movimentação (swap) dos valores, colocando o menor para a primeira posição, o segundo menor na segunda posição e assim por diante.
 
 ### Funcionamento

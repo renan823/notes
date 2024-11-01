@@ -1,4 +1,4 @@
-O produto vetorial é outro tipo de operação envolvendo vetores. Desta vez, o objetivo é encontrar outro vetor, que seja perpendicular aos outros dois. 
+O produto vetorial é outro tipo de operação envolvendo [[Vetores]]. Desta vez, o objetivo é encontrar outro vetor, que seja perpendicular aos outros dois. 
 A operação envolve o uso de [[Determinantes]].
 
 Para realizá-lo é necessário especificar uma base (quando não especificado, usar base ortonormal $i, j, k$)

@@ -1,4 +1,4 @@
-O bubble sort é um dos métodos de [[Ordenação]] mais utilizados.
+O bubble sort é um dos métodos de [[Ordenação de Dados]] mais utilizados.
 A ideia é intuitiva e não muito difícil de implementar.
 
 ### Funcionamento
@@ -22,7 +22,7 @@ No bubble sort normal, tanto no melhor como no pior caso, o algoritmo continua s
 
 Porém, o caso otimizado apresenta uma leve diferença nos cálculos, mas que resulta em $O(n²)$ também. 
 Nesse caso, o pior caso segue igual.
-Mas, no caso em que o vetor já está ordenado, o algoritmo executa 1 vez o laço interno, que vai n. Então torna-se $O(n)$
+Mas, no caso em que o vetor já está ordenado, o algoritmo executa 1 vez o laço interno, que por sua vez executa n vezes. Então torna-se $O(n)$
 
 ### Implementação em C
 

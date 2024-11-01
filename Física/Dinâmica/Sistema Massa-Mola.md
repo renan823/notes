@@ -1,3 +1,4 @@
+Representa mais uma parte do [[Programa Newtoniano]].
 
 ![[massa-mola1.png]]
 

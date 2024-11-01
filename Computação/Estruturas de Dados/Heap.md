@@ -1,4 +1,4 @@
-Uma heap é um tipo de [[Árvore Binária]] com regras especiais.
+Heaps são tipos de [[Árvores Binárias]] com regras especiais.
 Não deve-se confundir com a memória heap, usada na alocação dinâmica de variáveis.
 
 A estrutura pode ter dois tipos de ordem:

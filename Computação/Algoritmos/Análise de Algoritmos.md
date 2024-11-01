@@ -24,6 +24,7 @@ Cadastrar 10 pessoas leva mais tempo que 5... Devemos analisar com base em n ele
 Com n entradas, deve-se calcular todas as operações a serem realizadas sobre os n elementos.
 
 **O melhor algoritmo é aquele que realiza menos operações e resulta no mesmo resultado!**
+Como calcular o custo de métodos de [[Ordenação de Dados]]? E de [[Busca de Dados]]? Quanto custam as operações?
 
 ## Operações? Quais?
 Um operação é literalmente qualquer coisa (variáveis, loops, comparações, etc)
