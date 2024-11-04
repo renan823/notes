@@ -1,4 +1,3 @@
-### O que é um TAD?
 TAD é um tipo abstrato definido pelo programador para manipular seus dados, omitindo detalhes da implementação do usuário final.
 
 TADs serão utilizados na implementação das mais diversas estruturas de dados, permitindo uma melhor segurança e modularidade do código.

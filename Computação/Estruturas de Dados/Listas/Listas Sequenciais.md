@@ -1,5 +1,3 @@
-
-### Enfileirando items
 Uma lista coloca os elementos enfileirados.
 Não existe ordem de entrada/saída, sendo um elemento inserível em qualquer local que for desejado.
 Usualmente as inserções ocorrem no fim da lista, mas em listas ordenadas isso nem sempre é válido.

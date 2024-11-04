@@ -1,4 +1,3 @@
-### Empilhando items
 O funcionamento da pilha envolve colocar e retirar coisas do topo!
 Empilhar objetos! A ordem de entrada e saída é muito importante.
 
