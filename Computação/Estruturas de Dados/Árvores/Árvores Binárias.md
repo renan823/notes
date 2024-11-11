@@ -28,7 +28,6 @@ Esse processo é similar ao da [[Heap]].
 
 Entretanto, o problema de definir o nível permanece. Uma estrutura auxiliar é necessária.
 
-
 ### Árvore Binária Perfeitamente Balanceada
 Para cada nó, o número de nós de suas sub-árvores esquerda e direita difere em no máximo 1. Aqui, não é necessário colocar os nós à esquerda.
 É mais fácil contar o nós que armazenar nível.
@@ -38,3 +37,20 @@ A altura mínima é o piso de $\log_{2}n$
 Aqui, o que importa é a diferença de altura das sub-árvores.
 Para qualquer nó, a altura difere em no máximo 1.
 Toda árvore perfeitamente balanceada é uma árvore balanceada.
+
+### Implementação em Array
+filho esquerdo 2i + 1
+filho direito 2i + 2
+
+para achar o pai, usamo (i - 1) / 2
+
+### Implementação encadeada
+Cada nó armazena seu valor e dois ponteiros para outro nó (esquerdo e direito).
+A estrutura principal da árvore armazena a raiz e outros valores, por exemplo a profundidade.
+
+visitar o nó significa realizar alguma ação que envolva o nó. Mostrar dado, modificar valor, etc. Apenas passar pelo nó NÃO é visitar!
+
+### Percursos em Árvore
+- Pre-order: Visitar raiz. percorrer a esquerda em pre-order. percorrer a direita em pre-order.
+- In-order: percorrer a esquerda in-order. visitar a raiz. percorrer a direita in-order
+- Pos-order: percorrer a esquerda em pos-order. percorrer a direita em pos-order. visitar raiz.
