@@ -11,3 +11,4 @@ O overclock não aumenta a velocidade das operações lógicas, apenas do armaze
 
 ### Portas lógicas 
 - uso de relés
+

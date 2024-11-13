@@ -127,3 +127,6 @@ $$
 -10 & 10\\
 \end{bmatrix}
 $$
+
+
+[[Determinantes]]

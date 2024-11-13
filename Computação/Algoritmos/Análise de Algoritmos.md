@@ -99,7 +99,7 @@ Em funções que possuem constantes, as constantes devem ser "ignoradas" -> prev
 
 ### Recursão (ocorrências)
 Para analisar recursões em termos de complexidade é preciso quebrar o problema e encontrar uma equação que representa tal processo recursivo.
-Com a equação definida, existem métodos de resolvê-la.
+Com a equação definida, existem métodos de resolvê-la. Alguns casos fazem uso da [[Indução Matemática]] para provar o resultado/complexidade obtida.
 
 - **Aproximação** -> "chutar" uma complexidade e ver o comportamento da função. Ajustar o valor com o os teste garante um melhor resultado.
 

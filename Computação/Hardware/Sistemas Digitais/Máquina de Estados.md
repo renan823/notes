@@ -1,6 +1,6 @@
-Representa o conjunto de estágios que um circuito sequencial pode avançar.
+Representa o conjunto de estágios que [[Circuitos Sequenciais]] podem avançar.
 Cada estado armazena uma "recordação" do estado passado, para poder trabalhar no estado futuro.
-Um diagrama de fluxo é um grafo que representa os caminho e estados do sistema.
+Um diagrama de fluxo representa os caminho e estados do sistema.
 
 > **Estado = variável que armazena a memória do sistema**
 
