@@ -29,11 +29,33 @@ A inserção acontece nas seguintes etapas:
 
 > A busca deve respeitar a ordem das sub-árvores, identificando nós maiores e menores!
 
+Custo $O(\log{n})$
+
 ### Busca
 A busca inicia na raiz, respeitando a ordenação direita e esquerda.
 Caso a raiz seja nula, então retorne nulo (o item buscado não existe).
 Quando o item buscado for encontrado, retorne-o.
 Durante o percurso, alterne entre direita e esquerda quando necessário.
+
+Custo $O(\log{n})$
+
+### Remoção
+É a operação mais complexa envolvendo árvores de busca.
+Existem 3 casos para a remoção:
+- Nós folhas podem ser removidos sem nenhum problema
+- Nós com um filho terão seu local ocupado pelo filho (independentemente do lado)
+- Nós com dois filhos são um problema. A ideia é colocar na posição nó a melhor escolha possível. Essa escolha depende do caminho tomado. Caso a opção seja usar algum nó da esquerda, devemos usar a maior chave encontrada. Se a escolha for o nó da direita, devemos usar a menor chave encontrada ali.
+
+No pior caso da remoção, devemos percorrer a árvore toda (para achar o nó e fazer os ajustes para a remoção)
+
+Custo $O(\log{n})$ 
+
+### Complexidade
+Em árvores aleatórias, ou seja, cuja probabilidade de inserção é igual em todos os nós, as comparações serão, aproximadamente, $1,39 \log{n}$. Isso é $39$% pior que uma árvore devidamente balanceada.
+
+-> Útil em busca **se** a árvore estiver balanceada
+
+A manutenção do balanceamento pode ser feita por um algoritmo, como rebalanceamento, ou usando árvores balanceadas, como as [[Árvores AVL]]
 
 
 
