@@ -1,4 +1,4 @@
-As tabelas hash são estruturas lineares, como as [[Listas Sequenciais]], que viabilizam o acesso direto com custo $O(n)$ aos campos. Porém, diferentemente de um simples vetor, os índices são definidos por uma função especial, o que ocasiona na desordem dos valores (hash -> bagunça).  Este endereçamento é o que garante que chaves únicas ocupem locais únicos no array.
+As tabelas hash são estruturas lineares, como as [[Listas Sequenciais]], que viabilizam o acesso direto com custo $O(1)$ aos campos. Porém, diferentemente de um simples vetor, os índices são definidos por uma função especial, o que ocasiona na desordem dos valores (hash -> bagunça).  Este endereçamento é o que garante que chaves únicas ocupem locais únicos no array.
 
 O endereçamento pode ser direto, ou seja, o valor inteiro é seu próprio endereço.
 Também é possível usar funções de hashing no modo $F(x) = y$, configurando um método indireto.

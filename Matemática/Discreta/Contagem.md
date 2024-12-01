@@ -14,25 +14,59 @@ Pensando como "caixinhas":
 Montar a placa envolve combinar todas as possibilidades de números e letras.
 - Letras podem ser repetidas (alfabeto 26 letras)
 - Números podem ser repetidos (0-9)
-Assim, obtemos algo como: $26⁴*10³$ possibilidades diferentes.
+Assim, obtemos algo como: $26⁴ \cdot 10³$ possibilidades diferentes.
 
 >[!tip] O método das caixinhas é realmente útil!
 
 
-### Uma equação para isso
-A base para a combinatória é formar conjuntos com $k$ elementos disponíveis no conjunto $n$.
-Contar "n k a k" significa justamente isso.
+### Princípio Fundamental da Contagem
+Utiliza da multiplicação de $k$ fatores.
+Os fatores podem ser todos iguais, o que ocasionaria em $k^{n}$ para $n$ elementos.
+Os fatores podem ser diferentes, e a regra de variação depende de cada caso.
+$$T = k_1 \cdot k_2 \cdot k_3 \cdot k_4 \dots k_n$$
+
+### Permutação Simples
+Casos de trocas em que a ordem importa, e cada caso é contado.
+$$P_n = n!$$
+
+### Permutação com Repetição
+O caso base não engloba os problemas com items repetidos, que, ao serem multiplicados, terão sua ordem contabilizada, o que é errado.
+Então, é necessário descontar casos cujas contagens desnecessárias estejam sendo feitas.
+
+Esse "desconto" ocorre dividindo o resultado pelo fatorial do número de ocorrências do item, podendo haver mais de um tipo de item repetido.
+
+O uso desses casos é muito comum em anagramas, em que letras podem estar repetidas.
+
+$$P_n(\alpha, \beta) = \frac{n!}{\alpha! \cdot \beta!}$$
+##### Exemplo
+Anagramas de "BANANA" -> 6 letras, 2 "N" e 3 "A"
+$$6! /( 2! \cdot 3!) = 60$$
+
+### Contagem com agrupamento
+Nesses casos, alguns items estarão em subgrupos, o que infere em uma contagem específica para eles, que depois será contabilizada na contagem principal.
+Os agrupamentos surgem de especificações ou restrições dadas no problema
+
+> Sempre começar a contagem pela especificação/restrição mais complexo
+
+Agrupar é como colocar os items especificados em uma "caixinha". O grupo pode ser permutado internamente, e quando for permutado com os outros items externos irá contar apenas como um único item.
+
+##### Exemplo
+Permutações de "APROVEI" com as vogais sempre juntas.
+"AOEI" -> sempre juntas (grupo), com permutação $4!$
+"XRPV" -> permutação geral (com "X" sendo o grupo), com permutação $4!$
+
+Logo $4! \cdot 4!$.
+
+### Arranjo
+A base para a combinatória é formar conjuntos com $k$ elementos disponíveis no conjunto $n$. Contar "n k a k" significa justamente isso.
+
 Ao iniciar, o primeiro dos $k$ elementos pode ter qualquer um dos $n$ valores. Seguindo, ao usar um valor, o próximo $k$ elemento poderá ter $n-1$ valores... A sequência formada resultada na equação da combinatória:
-### $$P(n,k) = \frac{n!}{(n-k)!}$$
-Esse caso conta a quantidade de **listas** -> ordem importa!
-A diferença, muitas vezes, é que buscamos algo em que a ordem não importa-> **conjuntos**.
+$$A(n,k) = \frac{n!}{(n-k)!}$$
+Esse caso conta casos cuja ordem importa -> **listas** 
 
-Para contar conjuntos temos a notação "n escolhe k":
-
-### $${n\choose{k}}=\frac{n!}{(n-k)!k!}$$
-Basicamente, para contar conjuntos ("n escolhe k") deve-se descontar os casos com repetição $k!$. Para isso, basta desconta-los na equação de permutação de listas.
-
-A grande maioria dos problemas envolve as duas equações apresentadas, variando valores e o modo de pensá-las.
+### Combinação
+Consiste em um arranjo para items cuja ordem não importa -> **conjuntos**.
+$$C_{n}^{k} = \frac{n!}{k! \cdot (n - k)!}$$
 
 ### Princípio da inclusão e exclusão
 
