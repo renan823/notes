@@ -57,6 +57,10 @@ Permutações de "APROVEI" com as vogais sempre juntas.
 
 Logo $4! \cdot 4!$.
 
+### Listas e Conjuntos
+-> Lista é um agrupamento de $k$ objetos, **a ordem importa**.
+-> Conjunto é um agrupamento de $k$ objetos, **a ordem não importa**.
+
 ### Arranjo
 A base para a combinatória é formar conjuntos com $k$ elementos disponíveis no conjunto $n$. Contar "n k a k" significa justamente isso.
 
@@ -66,7 +70,21 @@ Esse caso conta casos cuja ordem importa -> **listas**
 
 ### Combinação
 Consiste em um arranjo para items cuja ordem não importa -> **conjuntos**.
+Chamado "n escolhe k".
 $$C_{n}^{k} = \frac{n!}{k! \cdot (n - k)!}$$
+### Estrelas e Barras
+É um método para contar quantos grupos podem ser formados com $n$ elementos em $k$
+grupos. O número de elementos em cada grupo pode ser 0 (será especificado o mínimo de elementos caso contrário)
+
+Como dividir 6 estrelas em 3 grupos?
+$*|*|****$  ou $**|**|**$ ou ...
+
+O total de possíveis resultados pode ser dado por duas equações:
+
+- Caso 1: O grupo pode ter 0 elementos
+$$C_{k-1}^{n+k-1}$$
+- Caso 2: O grupo não pode ter 0 elementos
+$$C_{k-1}^{n-1}$$
 
 ### Princípio da inclusão e exclusão
 

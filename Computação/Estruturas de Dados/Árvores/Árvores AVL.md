@@ -24,3 +24,7 @@ Rotacionar a árvore é a operação que tenta estabilizar as alturas, mantendo 
 Para decidir qual rotação aplicar, basta olhar para o sinal dos nós A e B. Caso sejam iguais, é uma rotação simples. Caso contrário, é uma rotação dupla (começando em B). O tipo de rotação é dado pelo fator de balanceamento -> negativo roda para a esquerda, positivo roda para a direita.
 
 -> Como ajustar corretamente os fatores após uma rotação dupla?
+
+
+### Custo
+AVLs possuem custo $1.44 \log{n}$, em relação as binárias de busca. De forma assintótica, as operações serão $O(\log{n})$.
