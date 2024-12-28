@@ -12,7 +12,24 @@ Uma árvore $T$ é um conjunto de elementos chamados nós.
 O nó inicial é chamado raiz (root) e seus filhos são sub-árvores. 
 Com pouco esforço, percebemos como a definição de árvores é recursiva! Os algoritmos envolvidos são praticamente todos recursivos.
 
+### Representações
+A estrutura da árvore pode ser representada de muitas formas graficamente. A mais comum usa [[Grafos]], desenhando nós e arestas.
+![[arvore.png]]
 
+Usar **indentação** também é útil, mostrando a árvore com um livro e seus capítulos e seções.
+
+- D
+	- C
+		- A
+		- B
+	- G
+		- F
+		- H
+		- I
+
+Outro modo é usar a **notação de aninhada** (conjuntos), afinal, **árvore são conjuntos**.
+
+-> T = { D, { C { {A}, {B} } }, { G, { {F}, {H}, {I} } } }  
 ### Terminologias
 O **grau de um nó** representa o número de sub-árvores que ele possui.
 Quando o grau é zero, ou seja, o nó não possui filhos, dizemos que ele é uma **folha**.

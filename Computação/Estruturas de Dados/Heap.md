@@ -1,5 +1,5 @@
 Heaps são tipos de [[Árvores Binárias]] com regras especiais.
-Não deve-se confundir com a memória heap, usada na alocação dinâmica de variáveis.
+Não deve-se confundir com a [[Memória Heap]], usada na alocação dinâmica de variáveis.
 
 A estrutura pode ter dois tipos de ordem:
 - Heap máximo: Cada nó deve ser maior que seus filhos;
@@ -19,3 +19,13 @@ Os filhos de um nó $k$ serão:
 O pai de um nó pode ser encontrado com $(k-1)/2$
 
 E todas as folhas (nós sem filhos) estarão em $n/2$ em diante.
+
+### Manutenção da ordem
+Existem duas operações para manter a heap sempre organizada:
+- **Shift Up**: Ocorre após a inserção, trocando o filhos com o pai enquanto o valor do filho for maior que o do pai.
+- **Shift Down**: Ocorre após remoção, trocando o pai com o maior filho enquanto houver maior filho.
+
+
+-> Heaps podem ser aplicadas como **filas de prioridade**, mantendo o item de maior prioridade no nó raiz. 
+
+Heap possui operações em $O(\log{n})$, obtido pela [[Progressão Geométrica]] dos níveis presentes.

@@ -6,7 +6,7 @@ As árvores binárias possibilitam a união entre vantagens das [[Listas Sequenc
 
 O controle da altura da árvore é uma ação necessária! 
 A altura máxima é $n-1$.
-A altura mínima é o piso de $\log_{2}n$
+A altura mínima é $\lfloor \log_{2}n \rfloor$
 
 ### Árvores Estritamente Binárias
 São uma especificação das árvores binárias que mudam as regras, permitindo que um nó tenho 0 filhos ou 2 filhos. Nós com apenas um filho não são permitidos. 
@@ -31,7 +31,7 @@ Entretanto, o problema de definir o nível permanece. Uma estrutura auxiliar é 
 ### Árvore Binária Perfeitamente Balanceada
 Para cada nó, o número de nós de suas sub-árvores esquerda e direita difere em no máximo 1. Aqui, não é necessário colocar os nós à esquerda.
 É mais fácil contar o nós que armazenar nível.
-A altura mínima é o piso de $\log_{2}n$ 
+A altura mínima é $\lfloor \log_{2}n \rfloor$ 
 
 ### Árvore Binária Balanceada
 Aqui, o que importa é a diferença de altura das sub-árvores.
@@ -42,13 +42,13 @@ Toda árvore perfeitamente balanceada é uma árvore balanceada.
 filho esquerdo 2i + 1
 filho direito 2i + 2
 
-para achar o pai, usamo (i - 1) / 2
+Para achar o pai, usamos (i - 1) / 2
 
 ### Implementação encadeada
 Cada nó armazena seu valor e dois ponteiros para outro nó (esquerdo e direito).
 A estrutura principal da árvore armazena a raiz e outros valores, por exemplo a profundidade.
 
-visitar o nó significa realizar alguma ação que envolva o nó. Mostrar dado, modificar valor, etc. Apenas passar pelo nó NÃO é visitar!
+Visitar o nó significa realizar alguma ação que envolva o nó. Mostrar dado, modificar valor, etc. Apenas passar pelo nó NÃO é visitar!
 
 ### Percursos em Árvore
 - Pre-order: Visitar raiz. percorrer a esquerda em pre-order. percorrer a direita em pre-order.

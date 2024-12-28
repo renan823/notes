@@ -22,11 +22,13 @@ int main () {
 - char -> armazena um único caractere; usa-se aspas simples 
 
 ### Saída formatada
-Para exibir uma variável no console é necessário especificar o tipo da váriavel:
-- "%d" ou "%i" -> int
-- "%f" ou "%F" -> float
-- "%lf" -> double (casas reduzidas)
-- "%c" -> char
+Para exibir uma variável no console é necessário especificar o tipo da variável:
+- `%d` ou `%i` -> int
+- `%f` ou `%F` -> float
+- `%lf` -> double (casas reduzidas)
+- `%c` -> char
+- `%s` -> string (vetor char)
+- `%p` -> endereço
 
 Desse modo, pode-se combinar diferentes saídas, como:
 ```c
@@ -53,8 +55,68 @@ printf("%.3f", money"); // 7.756
 - Ao declarar uma constante, usa-se "const"
 - Boas práticas sugerem nomear a constante em caixa alta 
 
-### Booleans
-O tipo boolean não é nativo, então deve ser importado na biblioteca "<stdbool.h>"
+### Boolean
+O tipo boolean não é nativo, então deve ser importado na biblioteca "<stdbool.h>".
+Usando a biblioteca, temos acesso ao `true` e `false`.
+Podemos usar 1 e 0 para, respectivamente, verdadeiro e falso.
 
 ### Operadores
-- Igual ao JS
+Possui operadores aritméticos comuns:
+- `+` soma
+- `-` subtração
+- `*` multiplicação
+- `/` divisão
+- `%` resto (ou módulo, da [[Aritmética Modular]])
+
+As operações booleanas podem ser feitas usando os operadores:
+- `&&` AND
+- `||` OR
+- `!` NOT
+
+C também permite operações no nível de bits, com **operadores bitwise**:
+- `<<` left shift (dois bits para esquerda, ou multiplicar por 2)
+- `>>` right shift (dois bits para direita, ou dividir por 2)
+- `~` complemento, inverte cada bit do valor
+- `&` bitwise AND, aplica a operação AND em bits (compara cada bit usando AND)
+- `|` bitwise OR, aplica operação OR em bits (compara cada bit usando OR)
+
+Para atribuição, os operadores (considere `i` uma variável simbólica):
+- `==` Igualdade
+- `!=` Diferença
+- `++i` Adiciona 1 ao valor de `i`, depois usa seu valor
+- `i++` Usa o valor de `i`, depois adiciona 1 no valor
+- `--i` Subtrai 1 no valor de `i`, depois usa seu valor
+- `i--` Usa o valor de `i`, depois subtrai 1 no valor
+- `i += x` Adiciona `x` ao valor de `i`
+- `i -= x` Subtrai `x` do valor de `i`
+- `i *= x` Multiplica o valor de `i` por `x`
+- `i /= x` Divide o valor de `i` por `x`
+
+### Condicionais
+C apresenta dois tipos de condicionais principais:
+
+##### if, else e else if
+```c
+if (condicao) {
+
+} else if (condicao2) {
+
+} else {
+	//default
+}
+```
+
+##### Switch 
+```c
+switch(variavel) {
+	case 12:
+		//
+		break;
+	case 278..389:
+		break;
+	default:
+		
+}
+```
+O uso do break é necessário, pois, uma vez atingida alguma condição, tudo que estiver abaixo dela será executado (sem verificar!) caso não haja break.
+Caso nenhuma condição seja satisfeita, o `default` é executado.
