@@ -7,3 +7,12 @@ Para acessar o `file descriptor` associado ao arquivo de socket, devemos usar a 
 Como tudo em Unix *é* um arquivo, poderíamos escrever e ler dados do socket usando funções padrões do [[C]], como `write` e `read`. Sim, nós podemos. Mas usar função específicas garante maior controle sobre o envio dos dados. Para isso, usamos `send` e `recv`.
 
 2.1
+
+### Implementação e Exemplos
+
+##### Bibliotecas
+- `sys/scoket.h` para manipular socket
+- `netinet/in.h` para IP e endereços
+- `arpa/inet.h` para funções auxiliares
+- `unistd.h` para fechar socket Unix
+

@@ -120,3 +120,47 @@ switch(variavel) {
 ```
 O uso do break é necessário, pois, uma vez atingida alguma condição, tudo que estiver abaixo dela será executado (sem verificar!) caso não haja break.
 Caso nenhuma condição seja satisfeita, o `default` é executado.
+
+
+### Funções (simples)
+São blocos reutilizáveis de código que executam uma tarefa, podendo receber e devolver valores.
+
+Definição: `tipo_retorno nome(tipo variavel1, tipo variavel2)`
+
+A função pode receber vários parâmetros, precisando especificar a tipagem e o nome de cada um. Parâmetros são opcionais (`void` para indicar ausência deles).
+
+Retorno é opcional, `void` para retorno vazio. Para retornar um valor, usamos a diretiva `return` (não é necessário envolver o valor por parenteses, vai da escolha de estilização).
+**Apenas uma valor pode ser retornado**.
+
+```c
+int soma(int x, int y) {
+	return(x + y);
+}
+```
+
+```c
+void mensagem_oi(void) {
+	printf("Oi\n");
+}
+```
+
+```c
+void mensagem_erro(bool erro) {
+	if (erro) {
+		printf("Deu erro!\n");
+		return;
+	}
+	printf("Deu certo!\n");
+}
+```
+
+### Ponteiros
+
+
+### Vetores
+
+
+### Alocação de memória
+
+
+###  Funções (variádicas)
