@@ -1,1 +1,0 @@
-São conjuntos de dados assim como as [[Árvores]], mas, não aqui o conceito de hierarquia não pode ser aplicado, umas vez que cada nó pode fazer diversas conexões
