@@ -1,5 +1,5 @@
 - Linguagem de médio nível
-- Diferencia-se do [[C++]] por não possuir objetos 
+- Diferencia-se do [[C++]] por não possuir objetos
 
 ### Código básico
 ```c
