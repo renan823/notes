@@ -1,0 +1,1 @@
+É a parte responsável por entender as instruções e gerar sinais de controle para executar a operação.
