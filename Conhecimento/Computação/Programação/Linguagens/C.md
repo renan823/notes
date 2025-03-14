@@ -502,9 +502,66 @@ Para não tentar acessar um ponteiro que já foi liberado, é muito comum após 
 
 
 ### Arquivos
-A linguagem C oferece uma interface para a manipulação de arquivos via **streams e buffers**.
+Salvar dados em arquivos permite transportá-los de um lado para o outro, adicionando uma formatação e/ou tipagem de dados.
 
+Manter dados na memória pode ser algo caro. A memória tem limite, ou seja, não é todo tipo de dado que cabe ali.
+Usar arquivos permite armazenar muito (muito) mais dados usando disco (memória secundária).
 
+C fornece uma interface para se comunicar com os arquivos, que aqui são tratados como streams -> fluxo contínuo de bytes. 
+O SO é o responsável por manipular diretamente os dados, o programador apenas chama funções que serão recebidas e tratadas pelo SO. 
+
+> Programador não mexe diretamente no arquivo!
+
+Para o SO, tudo é um arquivo! Podemos tratá-los como um texto, uma imagem, uma impressora e até uma conexão com servidor!
+
+Para manipular arquivos, a biblioteca `<stdio.h>` é necessária. A `<stdlib.h>` pode ajudar bastante, também!
+
+O arquivo é um **ponteiro do tipo `FILE`**.
+
+##### Abrir / fechar arquivo
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	// Abrir arquivo
+	FILE *arquivo = fopen("meuarquivo.txt", "r");
+	if (arquivo == NULL) {
+		printf("Deu ruim!\n");
+		exit(1);
+	}
+
+	// Manipular seus dados...
+
+	// Fechar arquivo
+	fclose(arquivo);
+}
+```
+
+A função `fopen` recebe como parâmetros o nome do arquivo e o modo de operação.
+O modo de operação define a ação que será realizada -> leitura, escrita, ambos, etc.
+Caso o arquivo exista, um ponteiro para ele é retornado. Caso contrário, um ponteiro NULL é retornado.
+
+A função `fclose` é a responsável por fechar o arquivo e então, e só então, gravar os dados nele.
+
+Modos de operação:
+
+| Modo de acesso (código) | Descrição do funcionamento                                                                                                          |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **r**                   | Abre o arquivo para leitura. Se o arquivo não existe, retorna NULL.                                                                 |
+| **rb**                  | Abre o arquivo binário para leitura. Se o arquivo não existe, retorna NULL.                                                         |
+| **w**                   | Abre o arquivo para escrita. Cria o arquivo/sobrescreve o existente.                                                                |
+| **wb**                  | Abre o arquivo binário para escrita. Cria o arquivo/sobrescreve o existente.                                                        |
+| **a**                   | Abre o arquivo para escrita. A escrita será feita no final do arquivo, mantendo o conteúdo. Cria o arquivo caso não exista.         |
+| **ab**                  | Abre o arquivo binário para escrita. A escrita será feita no final do arquivo, mantendo o conteúdo. Cria o arquivo caso não exista. |
+| **r+**                  | Abre o arquivo para leitura/escrita. Se o arquivo não existe, retorna NULL.                                                         |
+| **rb+**                 | Abre o arquivo binário para leitura/escrita. Se o arquivo não existe, retorna NULL.                                                 |
+| **w+**                  | Abre o arquivo para escrita. Cria o arquivo/sobrescreve o existente.                                                                |
+| **wb+**                 | Abre o arquivo binário para escrita. Cria o arquivo/sobrescreve o existente.                                                        |
+| **a+**                  | Abre o arquivo para escrita. A escrita será feita no final do arquivo, mantendo o conteúdo. Cria o arquivo caso não exista.         |
+| **ab+**                 | Abre o arquivo binário para escrita. A escrita será feita no final do arquivo, mantendo o conteúdo. Cria o arquivo caso não exista. |
+
+##### Escrever no arquivo
 
 ###  Funções (variádicas)
 

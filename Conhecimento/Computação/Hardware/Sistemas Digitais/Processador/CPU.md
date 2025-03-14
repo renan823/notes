@@ -18,21 +18,36 @@ Para executar uma operação, são necessário dois passos: ciclo de busca e cic
 
 ![[ciclos.png]]
 
+
+##### Ciclo de Busca
 O ciclo de busca é responsável por identificar a próxima instrução, acessar o endereço correspondente na memória e trazer esses dados para dentro do processador (nos registradores).
+O processador identifica que o ciclo é de instrução, então sabe que a área da memória que será acessada é da seção de instruções.
 
-![[ciclo_busca1.png]]
+![[ciclo_busca_completo.png]]
+
 O PC indica qual é o endereço de memória que deve ser buscado.
+O barramento deve transmitir 3 tipos de dados para permitir a comunicação CPU-Memória:
+- Endereço -> Qual a posição desejada
+- Dados -> Valores que serão escritos ou buffer de leitura
+- Controle -> Ação de leitura ou escrita
 
-![[ciclo_busca2.png]]
-No endereço identificado, os dados naquela posição são trazidos ao processador via barramento e são armazenados no MBR. O valor do PC é salvo no MAR.
+O endereço no PC deve ser armazenado no MAR para então ser buscado na memória. Porém, a instrução pode estar no IR, o que exige um controle de qual dado será usado para acesso na memória.
+O controle é feito usando um [[MUX]], que recebe as saídas de ambos PC e IR, e seleciona o correto (via sinal de controle da UC) para ser enviado ao MAR.
 
-![[ciclo_busca3.png]]
-Por último, o PC é incrementado (próxima instrução) e o dado contido no MBR é passado para o IR. 
+No endereço identificado, os dados naquela posição são trazidos ao processador via barramento e são armazenados no MBR. 
 
-Desse modo, a instrução é buscada e armazenada no processador para ser usada.
+O dado contido no MBR é passado para o IR. 
+No IR, o Opcode (código da operação) é enviado para a UC, para que então os sinais sejam gerados.
 
+Por último, o PC é incrementado.
+
+> Desse modo, a instrução é buscada e armazenada no processador para ser executada
+
+
+##### Ciclo de execução
 O ciclo de execução é configurado pela UC, e pode ser uma das seguintes operações (ou uma combinação delas):
 - Transferir dados entre processador e memória (e vice-versa)
 - Transferir dados entre processado e buffers de I/O
 - Executar operação lógica/aritmética
 - Alterar a sequência de execução (operação de controle)
+

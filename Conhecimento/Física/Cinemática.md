@@ -3,7 +3,7 @@ Cinemática é a parte da física responsável por estudar os movimentos e as tr
 Velocidade, aceleração e leis de Newton são essenciais.
 
 ### Por onde começar?
-A representação de grande parte da cinemática é feita utilizando [[Vetores]].
+A representação de grande parte da cinemática é feita utilizando [[Conhecimento/Matemática/Álgebra Linear/Vetores]].
 As operações envolvendo vetores também serão utilizados, bem como  [[Produto Escalar]], [[Produto Vetorial]], [[Produto Misto]].
 
 As aplicações do cálculo serão necessárias na manipulação de muitos casos. [[Limites]], [[Derivadas]] e [[Integrais]] serão indispensáveis.
