@@ -1,6 +1,6 @@
 
 ### O que é?
-É uma operação entre [[Conhecimento/Matemática/Álgebra Linear/Vetores]] que resulta na projeção de um sobre o outro. Como o nome sugere, o resultado é um valor escalar.
+É uma operação entre [[Vetores]] que resulta na projeção de um sobre o outro. Como o nome sugere, o resultado é um valor escalar.
 
 ### Equação
 ## $$\vec{u}*\vec{v} = ||\vec{u}||*||\vec{v}||*cos(\theta)$$

@@ -1,4 +1,5 @@
 
+
 Sejam $\vec{u}$ e $\vec{v} \in V^{ 3}$ ($\vec{u}\neq  \vec{0}$ e $\vec{v}\neq  \vec{0}$) paralelos. 
 Usando seus versores:
 - Eles tem mesmo comprimento

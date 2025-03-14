@@ -1,5 +1,5 @@
 Está associada ao movimento dos corpos.
-Enquanto forças são tratadas como [[Conhecimento/Matemática/Álgebra Linear/Vetores]], a energia é uma quantidade escalar.
+Enquanto forças são tratadas como [[Vetores]], a energia é uma quantidade escalar.
 
 Sua medida no Sistema Internacional é em Joules (J).
 
