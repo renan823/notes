@@ -33,5 +33,38 @@ Esse é o papel da **teoria da informação**, uma ferramenta matemática que de
 > - P é a probabilidade de ocorrência do símbolo i
 > - H é a entropia
 
+Por exemplo, se quisermos comprimir dados com o alfabeto latino, atribuiremos menor número de bits para letras mais frequentes.
+
+Exemplo: com um alfabeto: M, F, Y, N, 0 e 1 com frequências, respectivamente, 0.25, 0.25, 0.125, 0.125, 0.125, 0.125.
+Os códigos são: M = 10, F = 11, Y = 010, N = 011, 0 = 000, 1 = 001.
+
+Aplicando o teorema de Shannon, temos a entropia: $2(0.25 \log_2 0.25)+4(0.125 \log_2 0.125) = 2.5$
+Se calcularmos o número médio de bits( $NMB = \sum N_i P_i$ ) teremos que $2(0.5)+4(0.375) = 2.5$ Isso nos mostra que o algoritmo atinge a MELHOR taxa de compressão!
+
+-> É muito comum representar códigos de tamanho variado para representar os símbolos, mas surge o problema: onde começa o próximo código?
 
 
+### Propriedade do prefixo
+Nenhum código de tamanho menor deve ser prefixo de um código maior para evitar ambiguidade!
+
+### Codificação de Huffman
+Usa uma [[Árvore de Huffman]] para gerar os códigos.
+
+### Codificação por diferenças
+Usado para sequências de dados com um range muito grande, porém, com valores próximos.
+
+Sempre usamos o primeiro como "pivô", mantido integralmente. Depois, cada valor será representado pela diferença com seu anterior.
+Então, basta aplicar Huffman para o número de bits dos valores gerados pelas diferenças e gerar a árvore.
+Os símbolos gerados serão "unidos" aos binários das diferenças, assim indicando quantos bits serão lidos -> símbolos de tamanhos variáveis!
+
+Este método é usado na codificação JPEG
+
+### Codificação por carreira
+Também chamada de run length.
+Muito útil para codificar longas cadeias de caracteres/dígitos.
+
+Geramos uma tabela com skip e value -> o número de repetições do símbolo e o símbolo.
+O Huffman será aplicado nos pares skip e número de bits no value.
+
+
+-> Para salvar dados no nível de bytes, usamos um buffer (unsigned char), percorremos os valores necessários (por exemplo, o código gerado) e realizamos um OR entre o buffer e o código (converter para int). Para cada iteração, fazer bitwise no buffer.

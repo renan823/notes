@@ -29,3 +29,11 @@ Devido à velocidade reduzida de operações em disco, quando estamos utilizando
 - Se possível, efetuar uma única consulta ao disco
 - Efetuar o menor número de acessos em disco (caso a única consulta não seja suficiente)
 - Ao acessar o dado, traga-o por completo (agrupe-o e devolva tudo que for necessário)
+
+
+### Custo de acesso
+- Seek time: tempo para posicionar a cabeça de leitura
+- Rotation delay: tempo necessário para rotacionar o disco até a posição correta
+- Transfer time: tempo para descarregar os dados
+
+ No caso dos códigos em C, o programa não salva, necessariamente, os dados na mesma hora que é feita a solicitação. Tudo é uma abstração!

@@ -1,5 +1,5 @@
 
-Clound computing representa o conjunto de serviços e recursos oferecidos por uma empresa por meio da internet.
+Cloud computing representa o conjunto de serviços e recursos oferecidos por uma empresa por meio da internet.
 
 ### Características básicas
 - Pode controlar o uso de recursos sem interação humana (em demanda)

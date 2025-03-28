@@ -20,6 +20,19 @@ let entrada = read lentrada
 ```
 
 
+### Tipos de dados
+Haskell possui `type` e `type class` que garantem um sistema de tipos conciso e seguro.
+
+```haskell
+m :: Int
+m = 5
+```
+
+**`Integer`** -> Representa inteiros. Não tem limite de bytes (a memória é o limite).
+**`Int`** -> Representa inteiros. TEM limite de valor máximo e mínimo.
+**`Char`** -> Representa um caractere.
+**`[X]`** -> Lista do tipo X.  
+
 ### Operadores
 
 Sucessor de um valor
@@ -44,11 +57,17 @@ Funções podem ter if e else ou então outro statement.
 
 Valores que não são usados, não são calculados!
 
+> Funções de alta ordem são aquelas que recebem outra função como argumento
+
+Parâmetros podem ser omitidos usando `_` em sua posição na função.
+
 ```haskell
+f :: Integer -> Integer
 f x = x + x
 ```
 
 ```haskell
+sinal :: Integer -> Integer
 sinal x
 	| x < 0 = -1
 	| x == 0 = 0
@@ -56,10 +75,23 @@ sinal x
 ```
 
 ```haskell
+absoluto :: Integer -> Integer
 absoluto x
 	| x < 0 = -x
 	| otherwise = x
 ```
+
+
+### Currying
+Modelo definido por Haskell Curry (dá nome à linguagem).
+Implica em funções que recebem apenas um argumento, e retorna apenas um argumento, nada mais, nada menos.
+
+```haskell
+adiciona :: Integer -> Integer -> Integer
+adiciona x = \x -> (\y -> x + y)
+adiciona' x y = x + y 
+```
+
 
 
 ### Listas

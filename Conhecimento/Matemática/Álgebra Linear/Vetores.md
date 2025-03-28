@@ -83,15 +83,12 @@ Seja $a \in \mathbb{R}$ e $\vec{u} \in V^{ 3}$, temos:
 - Seja $ABCDEF$ um hexágono regular de centro $O$, mostre que $\vec{AB}+\vec{AC}+\vec{AD}+\vec{AE}+\vec{AF}=6\vec{AO}$ .
 ![[ex1.png]]
 
-
-
-
 - Mostre que se $\vec{0} \neq \vec{u} \in V^{ 3} \implies ||\vec{u}|| > 0$:
 
 
 
-- Sendo M o ponto médio de AC e N e de BD e $x = \vec{AB}+\vec{AD}+\vec{CB}+\vec{CD}$ prove que $\vec{x} || \vec{MN}$.
-
+- Sendo M o ponto médio de AC e N de BD e $x = \vec{AB}+\vec{AD}+\vec{CB}+\vec{CD}$ prove que $\vec{x} || \vec{MN}$.
+![[ex3.png]]
 
 ### Versor
 O versor do vetor é um vetor unitário!
