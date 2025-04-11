@@ -61,6 +61,12 @@ A CISC possui instruções maiores e mais complexas. Algumas arquiteturas CISC (
 >Instruções CISC podem ocupar uma tamanho variável de bytes.
 >Instruções RISC possuem sempre a mesma quantidade de bytes.
 
-ISA -> Instruction Set Architecture
+[[ISA]]
 
 O modelo RISC usado atualmente é o [[RISC-V]].
+
+
+### Caminho dos dados
+Conexão entre componentes da CPU para que todas as instruções sejam executadas.
+Conectar registradores, ULA, UC, Memória, MUX, somadores, etc.
+

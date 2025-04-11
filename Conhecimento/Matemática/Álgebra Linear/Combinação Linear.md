@@ -10,6 +10,8 @@ Sejam $\vec{u}$ e $\vec{v}$ vetores. Então, $\vec{u}$ e $\vec{v}$ são paralelo
 
 $\vec{u_1} \dots \vec{u_n}$ são **linearmente dependentes** (LD) se existem valores $\alpha_1 \dots \alpha_n$ não todos nulos, tal que $\alpha_1 \vec{u_1} + \dots + \alpha_n \vec{u_n} = \vec{0}$.  
 
+Um conjunto de 4+ vetores sempre é LD
+
 
 - Vetor nulo sempre LD
 - Vetor não nulo sempre LI

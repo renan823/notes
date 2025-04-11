@@ -36,5 +36,14 @@ De modo funcional, as funções puras! Ou seja, não existe um código ali dentr
 
 Não há risco de, dentro de uma função, haver algum código que não faz parte ou não deveria estar ali -> Essa é a mágica de linguagens funcionais!
 
+Características de linguagens funcionais:
+- Função de primeira classe
+- Função de alta ordem
+- Função pura
+- Transparência referencial (uma vez definida a variável, ela não será mutada)
+- Estado imutável
+- Recursão de cauda
+- Sistema de tipos
+- Lazy computation
 
 

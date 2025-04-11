@@ -255,6 +255,34 @@ loop:
 ```
 
 
+> Exemplo: Vetor de strings
+
+```
+	.data
+vetor: .word 0, 0, 0, 0,0 
+str1: .asciz "String"
+str2: .asciz "Aaz"
+.
+.
+.
+	.text
+	.globl main
+
+main:
+	# Carregar primeiro byte do vetor
+	add s0, zero, vetor
+
+	# Carregar byte da str1 e salvar no vetor
+	add t0, zero, str1
+	sw t0, 0(s0)
+
+	# Carregar byte da str2 e salvar no vetor (com offset)
+	add t0, zero, str2
+	sw t0, 4(s0)
+	
+```
+
+
 > Exemplo: Somar items do vetor
 ```asm
 	.data
@@ -473,3 +501,83 @@ loop_copia:
 
 O `ptr` armazena o endereço de `a0`. Primeiro é necessário carregar o endereço de `ptr`.
 O conteúdo apontado por `ptr` é o endereço da região alocada, então, é necessário primeiro carregar o endereço de `ptr` e depois acessar, via `lw`, o conteúdo ali presente, que é o endereço para `a0`. 
+
+### Pilha
+Usada para realizar procedimentos recursivos.
+Precisamos indicar quantos items serão salvos na pilha, para então salvar um valor ali.
+
+```asm
+addi sp, sp, -8 # 2 x 4 bytes (a pikha cresce para baixo)
+
+# Salvar valores
+sw ra, 0(sp)
+sw a0, 4(sp)
+```
+
+
+> Exemplo: Fatorial Recursivo
+
+```asm
+	.data
+	.align 0
+msg1:	.asciz "Digite um valor: "
+msg2:	.asciz "O fatorial calculado eh: "
+
+	.text
+	.align 2
+	.globl main
+	
+main:
+	# Imprimir msg1
+	addi a7, zero, 4
+	la a0, msg1
+	ecall
+	
+	# Ler inteiro
+	addi a7, zero, 5
+	ecall
+	
+	# Salvar valor
+	add s0, zero, a0
+	
+	# Chamar fatorial
+	jal fatorial
+	
+	# Imprimir saida
+	addi a7, zero, 4
+	la a0, msg2
+	ecall
+	
+	# Imprimir fatorial
+	addi a7, zero, 1
+	add a0, zero, a1
+	ecall
+	
+	# Sair do programa
+	addi a7, zero, 10
+	ecall
+	
+fatorial:
+	addi sp, sp, -8     # Alocar espaço na pilha (8 bytes)
+	sw ra, 4(sp)        # Salvar o endereço de retorno na pilha
+	sw a0, 0(sp)        # Salvar argumento n na pilha
+	
+	addi t0, zero, 1            # t0 = 1
+	beq a0, zero, caso_base  # Se n == 0, retorna 1
+	
+	addi a0, a0, -1     # n - 1
+	jal fatorial        # Chamada recursiva fatorial(n-1)
+	
+	lw a0, 0(sp)        # Recupera n original
+	mul a1, a0, a1      # n * fatorial(n-1)
+	j fim
+
+caso_base:
+        addi a1, zero, 1            # Retorna 1
+
+fim:
+    	lw ra, 4(sp)        # Recupera o endereço de retorno
+    	addi sp, sp, 8      # Desaloca espaço da pilha
+    	jr ra
+
+```
