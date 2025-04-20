@@ -40,6 +40,8 @@ O estímulo é gerado no **nódulo sinoatrial (1)**, passado para o **nódulo at
 
 Corações com problemas de pulso precisam implantar um **marca-passo**, que irá atuar como o **nó sinoatrial** na geração dos pulsos. 
 
+> Hormônios liberados pelo [[Sistema Endócrino]], como a adrenalina, afetam o ritmo cardíaco, deixando o corpo em estado de alerta e preparando o coração para fuga/ação.
+
 ### Coração periférico de Barrow
 
 ![[barrow.png]]

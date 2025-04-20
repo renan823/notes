@@ -1,7 +1,9 @@
 Responsável pela liberação e controle dos hormônios, substâncias químicas responsáveis pela ativação de certos receptores celulares.
 As glândulas secretam sua produção na corrente sanguínea, controladas por outras glândulas e pelos mecanismos de feedback.
 
--> Cada glândula produz 1 ou mais hormônios.
+Os hormônios liberados pelas glândulas endócrinas afetam diversos sistemas e órgãos no corpo, como [[Sistema Nervoso]], [[Sistema Digestório]], etc; atuando como um verdadeiro mecanismo de comunicação química.
+
+-> Cada glândula secreta (não necessariamente produz) 1 ou mais hormônios.
 
 ### Glândula Pineal
 Localizada no encéfalo.

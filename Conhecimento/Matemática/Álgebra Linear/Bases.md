@@ -1,1 +1,1 @@
-Uma tripla ordenada $(\vec{u}, \vec{v}, \vec{w})$ de 3 vetores **linearmente independentes (LI)** é chamada de base em $V^{ 3}$. $\vec{u}, \vec{v}, \vec{w}$ não são coplanos.
+Uma tripla ordenada $(\vec{u}, \vec{v}, \vec{w})$ de 3 [[Vetores]] **linearmente independentes (LI)** é chamada de base em $V^{ 3}$. $\vec{u}, \vec{v}, \vec{w}$ não são coplanos.

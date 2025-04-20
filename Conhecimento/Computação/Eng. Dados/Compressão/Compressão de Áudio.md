@@ -48,6 +48,8 @@ O processo de conversão do áudio são implementados em hardware.
 
 Áudio pode ser armazenado em WAV, MP3...
 
+Aqui, mecanismos de [[Compressão de Dados]] comuns também são aplicados, como é o caso da [[Árvore de Huffman]].
+
 
 
 
