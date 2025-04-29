@@ -1,4 +1,6 @@
 
+É um método da [[Organização de Arquivos]] para armazenar campos (fixos ou variados) dos registros de dados.
+
 RRN -> Número Relativo do Registro (Relative Record Number)
 
 > Byte offset = rrn * tam_reg

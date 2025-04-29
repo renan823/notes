@@ -4,7 +4,7 @@ Estrutura de dados usada para representar [[Grafos]].
 Cada nó é um índice da matriz, com a posição $[i, j]$ representado a aresta entre i e j. Caso exista uma aresta, $[i, j] = 1$, caso contrário $[i, j] = 0$
 
 
-> Exemplo: Matriz de adjacência para um grado simples
+> Exemplo: Matriz de adjacência para um grafo simples
 
 | x   | 1   | 2   | 3   | 4   | 5   | 6   |
 | --- | --- | --- | --- | --- | --- | --- |

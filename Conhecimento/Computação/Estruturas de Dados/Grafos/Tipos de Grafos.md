@@ -14,3 +14,12 @@ Grafo cujos nós/vértices podem ser divididos em 2 subgrupos $V_1$ e $V_2$, com
 
 ### Grafo complementar
 Dado um grafo $G$, o grafo $G'$ é dito complementar caso seu conjunto de arestas seja compostos por aquelas que **não** estão presentes em $G$. Se unirmos os dois grafos, todas as arestas possíveis estarão preenchidas. 
+
+### Grafo completo
+É um grafo que possui todas as arestas possíveis -> $n (n-1)/2$ 
+
+### Grafo regular
+Ocorre quando todos os nós possuem o mesmo grau
+
+### Grafos valorados
+Uma aresta possui origem, destino e **peso** (força da relação)

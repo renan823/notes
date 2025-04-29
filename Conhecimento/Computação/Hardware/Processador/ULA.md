@@ -12,6 +12,15 @@ Saída:
 	- Overflow (V)
 	- Carry out (C)
 
+
+> A unidade de controle recebe os sinais da [[UC]] 
+
+
+#### ALU Control
+- lw/sw: 00 (realiza +)
+- beq: 01 (realize -)
+- tipo R: 01 (depende de f3 e f7)
+
 ### Somadores
 
 ![[full_adder.png]]

@@ -37,3 +37,7 @@ Devido à velocidade reduzida de operações em disco, quando estamos utilizando
 - Transfer time: tempo para descarregar os dados
 
  No caso dos códigos em C, o programa não salva, necessariamente, os dados na mesma hora que é feita a solicitação. Tudo é uma abstração!
+
+### Aplicações
+Sistemas que envolvem armazenamento em arquivos estão presentem corriqueiramente no dia a dia.
+O melhor exemplo são os [[Bancos de Dados]], com usa eficácia e eficiência na manipulação de milhões de registros de dados, gerindo [[Índices]], tabelas e consultas.

@@ -78,7 +78,8 @@ Para simplificação, as operações implementadas serão:
 - beq (tipo B)
 
 #### Monociclo
-Instruções executadas em um único ciclo de clock (considerar a instrução mais demorada)
+Instruções executadas em um único ciclo de clock (considerar a instrução mais demorada).
+Geralmente, operações de acesso à memória e de ponto flutuante são as mais demoradas.
 
 #### Multiciclo
 Instruções divididas em etapas, com cada etapa sendo executada em um ciclo.
@@ -102,6 +103,8 @@ Etapas precisam, preferencialmente, ter o mesmo tempo.
 
 ### Pipeline
 Instruções divididas em etapas, mas com execuções sobrepostas no tempo (sobrepor estágios). Todas as instruções passam por todos os estágios, mesmo não executando em algum deles.
+
+> As instruções ainda são executadas no mesmo tempo, mas o pipeline permite uma vazão (throughput) maior.
 
 Problemas do pipeline:
 - Dependência de dados: dado não está pronto na etapa que é requisitado

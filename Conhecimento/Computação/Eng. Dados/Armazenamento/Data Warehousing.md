@@ -1,0 +1,1 @@
+Engloba arquiteturas, algoritmos e ferramentas que permitem a unificação de dados de terceiros em uma única base estruturada, a **data warehouse**. Os dados são extraídos de [[Bancos de Dados]] (relacionais ou não), arquivos, etc; e processados para então entrarem no repositório unificado que é a dw.
