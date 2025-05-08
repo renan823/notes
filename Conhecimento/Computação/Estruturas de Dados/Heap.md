@@ -1,5 +1,4 @@
 Heaps são tipos de [[Árvores Binárias]] com regras especiais.
-Não deve-se confundir com a [[Memória Heap]], usada na alocação dinâmica de variáveis.
 
 A estrutura pode ter dois tipos de ordem:
 - Heap máximo: Cada nó deve ser maior que seus filhos;

@@ -14,7 +14,6 @@ Os meios usados para a transmissão e armazenamento de dados são limitados! Ent
 Chamada de **lossless**. 
 É reversível! Dados podem ser revertidos ao original, sem perda de informação.
 
-
 ### Compressão com perdas
 Chamada de **lossy**.
 Não é reversível. Existe perda de dados, que, com sorte, não é perceptível.
@@ -43,28 +42,10 @@ Se calcularmos o número médio de bits( $NMB = \sum N_i P_i$ ) teremos que $2(0
 
 -> É muito comum representar códigos de tamanho variado para representar os símbolos, mas surge o problema: onde começa o próximo código?
 
-
 ### Propriedade do prefixo
 Nenhum código de tamanho menor deve ser prefixo de um código maior para evitar ambiguidade!
 
-### Codificação de Huffman
-Usa uma [[Árvore de Huffman]] para gerar os códigos.
-
-### Codificação por diferenças
-Usado para sequências de dados com um range muito grande, porém, com valores próximos.
-
-Sempre usamos o primeiro como "pivô", mantido integralmente. Depois, cada valor será representado pela diferença com seu anterior.
-Então, basta aplicar Huffman para o número de bits dos valores gerados pelas diferenças e gerar a árvore.
-Os símbolos gerados serão "unidos" aos binários das diferenças, assim indicando quantos bits serão lidos -> símbolos de tamanhos variáveis!
-
-Este método é usado na codificação JPEG
-
-### Codificação por carreira
-Também chamada de run length.
-Muito útil para codificar longas cadeias de caracteres/dígitos.
-
-Geramos uma tabela com skip e value -> o número de repetições do símbolo e o símbolo.
-O Huffman será aplicado nos pares skip e número de bits no value.
-
 
 -> Para salvar dados no nível de bytes, usamos um buffer (unsigned char), percorremos os valores necessários (por exemplo, o código gerado) e realizamos um OR entre o buffer e o código (converter para int). Para cada iteração, fazer bitwise no buffer.
+
+Métodos de codificação: [[Codificação por Diferença]], [[Codificação por Carreira]] e [[Codificação de Huffman]]

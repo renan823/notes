@@ -21,327 +21,185 @@ O modo estático e encadeado (é uma simulação de encadeamento) é um caso esp
 
 **stack.h (interface)**
 ```c
-#ifndef STACK_H
-    #define STACK_H
-    #define MAX_SIZE 100
-
-    #include "item.h"
-    #include <stdbool.h>
-
-    typedef struct stack STACK;
-
-    STACK *stack_create();
-    void stack_destroy(STACK **stack);
-
-    bool stack_is_empty(STACK *stack);
-    bool stack_is_full(STACK *stack);
-    int stack_size(STACK *stack);
-
-    void stack_push(STACK *stack, ITEM *item);
-    ITEM *stack_pop(STACK *stack);
-    ITEM *stack_peek(STACK *stack);
-
-    void stack_print(STACK *stack);
-    void*stack_reverse(STACK *stack);
+#ifndef STACK_H_
+	#define STACK_H_
+	
+	typedef struct item ITEM;
+	
+	struct item {
+		int key;
+		void *value;
+	};
+	
+	ITEM *NewItem(int key, void *value);
+	void DestroyItem(ITEM **item);
+	
+	typedef struct stack STACK;
+	
+	STACK *NewStack();
+	void DestroyStack(STACK **stack);
+	
+	void StackPush(STACK *stack, ITEM *item);
+	ITEM *StackPop(STACK *stack);	
+	ITEM *StackPeek(STACK *stack);
+	
+	int StackSize(STACK *stack);
 #endif
 ```
 
 
 **stack.c (para implementação sequencial)**
 ```c
-#include "item.h"
 #include "stack.h"
 
-#include "<stdbool.h>"
-#include "<stdlib.h>"
-#include "<stdio.h>"
-
-struct stack {
-    ITEM *items[MAX_SIZE];
-    int size;
-};
-
-void *_allocate(int items, unsigned long size) {
-    void *mem;
-
-    if ((mem = malloc(item * size)) == NULL) {
-        fprintf(stderr, "ERROR: Not enough memory to allocate!\n");
-    }
-
-    return(mem);
-}
-
-STACK *stack_create() {
-    STACK *s = (STACK *) _allocate(1, sizeof(STACK));
-    s->size = 0;
-
-    return(s);
-}
-
-void stack_destroy(STACK **stack) {
-    if (stack == NULL || *stack == NULL) {
-        return;
-    }
-    
-    for (int i = 0; i < (*stack)->tamanho; i++) {
-        item_destroy(&((*stack)->items[i]));
-    }
-
-    free(*pilha);
-    *pilha = NULL;
-}
-
-bool stack_is_empty(STACK *stack) {
-    return(stack->size == 0);
-}
-
-bool stack_is_full(STACK *stack) {
-    return(stack->size == MAX_SIZE);
-}
-
-int stack_size(STACK *stack) {
-    return(stack->size);
-}
-
-void stack_push(STACK *stack, ITEM *item) {
-    if (stack_is_full(stack)) {
-        fprintf(stderr, "ERROR: The stack is full!\n");
-        return;
-    }
-
-    stack->items[stack->size] = item;
-    stack->size++;
-}
-
-ITEM *stack_pop(STACK *stack) {
-    if (stack_is_empty(stack)) {
-        fprintf(stderr, "ERROR: The stack is empty!\n");
-        return(NULL);
-    }
-
-    //precisa "apagar" o ponteiro pra item (usando auxiliar)...
-    stack->size--;
-
-    ITEM *item = stack_peek(stack);
-    stack->items[stack->size] = NULL;
-
-    return(item);
-}
-
-ITEM *stack_peek(STACK *stack) {
-    if (stack_is_empty(stack)) {
-        fprintf(stderr, "ERROR: The stack is empty!\n");
-        return(NULL);
-    }
-
-    return(stack->items[stack->size-1]);
-}
-
-void stack_print(STACK *stack) {
-    printf("Stack {\n");
-    printf("  - size: %d\n", stack->size);
-
-    printf("  - items: [ ")
-    for(int i = 0; i < stack->size; i++) {
-        printf("%d ", item_get_key(stack->items[i]));
-    }
-    printf("]\n");
-
-    printf("}\n");
-}
-
-void _swap(ITEM *a, ITEM *b) {
-    ITEM *temp = a;
-    a = b;
-    b = temp;
-}
-
-void stack_reverse(STACK *stack) {
-    /*
-    percorrer o vetor até a metade (verificar tamanho par/impar)
-    se par -> max = size/2
-    se impar -> max = (size-1)/2
-    swap nos ponteiros (i e p->size-i)
-    */
-    int max = (stack->size % 2 == 0) ? stack->size / 2 : (stack->size -1) / 2;
-
-    for(int i = 0; i < max; i++) {
-        _swap(stack->items[i], stack->items[stack->size-i]);
-    }
-}
-```
-
-
-**stack.c (para implementação encadeada)**
-```c
-#include "item.h"
-#include "stack.h"
-
-#include <stdbool.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-struct stack {
-    NODE *top;
-    int size;
-};
+typedef struct node NODE;
 
 struct node {
-    ITEM *item;
-    NODE *next;
+	ITEM *item;
+	NODE *next;
 };
 
-void *_allocate(int items, unsigned long size) {
-    void *mem = malloc(items * size);
+struct stack {
+	int size;
+	NODE *top;
+};
 
-    return(mem);
+// Creates a new item
+ITEM *NewItem(int key, void *value) {
+	ITEM *item = (ITEM*) malloc(sizeof(ITEM));
+	
+	if (item != NULL) {
+		item->key = key;
+		item->value = value;
+	}
+	
+	return item;
 }
 
-STACK *stack_create() {
-    STACK *s = (STACK *) _allocate(1, sizeof(STACK));
-
-    if (s == NULL) {
-        return(s);
-    }
-
-    s->top = NULL;
-    s->size = 0;
-
-    return(s);
+void DestroyItem(ITEM **item) {
+	if (*item == NULL) {
+		return;
+	}
+	
+	if ((*item)->value != NULL) {
+		free((*item)->value);
+	}
+	
+	free(*item);
+	*item = NULL;
 }
 
-void stack_destroy(STACK **stack) {
-    if (stack == NULL || *stack == NULL) {
-        return;
-    }
-
-    NODE *node;
-
-    while ((*stack)->top != NULL) {
-        node = (*stack)->top;
-        (*stack)->top = (*stack)->top->next;
-
-        item_destroy(&node->item);
-        node->next = NULL;
-        free(node);
-        node = NULL;
-    }
-
-    free(*stack);
-    *stack = NULL;
-
+// Creates stack node with the given item
+NODE *_NewNode(ITEM *item) {
+	NODE *node = (NODE*) malloc(sizeof(NODE));
+	
+	if (node != NULL) {
+		node->item = item;
+		node->next = NULL;
+	}
+	
+	return node;
 }
 
-bool stack_is_empty(STACK *stack) {
-    if (stack == NULL) {
-        return(false);
-    }
-
-    return(stack->size == 0);
+// Recusively destroies each stack node
+void _DestroyNode(NODE *node) {
+	if (node == NULL) {
+		return;
+	}
+	
+	// Go to the next
+	_DestroyNode(node->next);
+	
+	// Deallocte item
+	DestroyItem(&node->item);
+	
+	// Deallocate node
+	free(node);
 }
 
-bool stack_is_full(STACK *stack) {
-    if (stack == NULL) {
-        return(true);
-    }
-
-    //tenta alocar (a pilha estar cheia depende da capacidade de memoria)
-    //o limite é a heap!!
-    NODE *node = (NODE *) _allocate(1, sizeof(NODE));
-    if (node == NULL) {
-        return(true);
-    }
-
-    free(node);
-    return(false);
+// Initializes an empty stack
+STACK *NewStack() {
+	STACK *stack = (STACK*) malloc(sizeof(STACK));
+	
+	if (stack != NULL) {
+		stack->size = 0;
+		stack->top = NULL;
+	}
+	
+	return stack;
 }
 
-int stack_size(STACK *stack) {
-    if (stack == NULL) {
-        return(-1);
-    }
-
-    return(stack->size);
+// Destroies the stack (and its items)
+void DestroyStack(STACK **stack) {
+	if (*stack == NULL) {
+		return;
+	}
+	
+	// Remove nodes
+	_DestroyNode((*stack)->top);
+	
+	// Deallocate stack
+	free(*stack);
+	
+	*stack = NULL;
 }
 
-void stack_push(STACK *stack, ITEM *item) {
-    if (stack_is_full(stack)) {
-        fprintf(stderr, "ERROR: The stack is full!\n");
-        return;
-    }
-
-    NODE *new = (NODE *) _allocate(1, sizeof(NODE));
-    if (new == NULL) {
-        return;
-    }
-
-    new->item = item;
-    new->next = stack->top;
-
-    stack->top = new;
-    stack->size++;
+// Inserts the new item on the top
+void StackPush(STACK *stack, ITEM *item) {
+	if (stack == NULL) {
+		return;
+	}
+	
+	// Create a new node
+	NODE *node = _NewNode(item);
+	if (node == NULL) {
+		return;
+	}
+	
+	// Adjust pointers
+	node->next = stack->top;
+	stack->top = node;
+	stack->size++;
 }
 
-ITEM *stack_pop(STACK *stack) {
-    if (stack_is_empty(stack)) {
-        fprintf(stderr, "ERROR: The stack is empty!\n");
-        return(NULL);
-    }
-
-    stack->size--;
-
-    //movendo o top
-    NODE *old = stack->top;
-    stack->top = old->next;
-    old->next = NULL;
-
-    //salvar o item e excluir ponteiros
-    ITEM *item = old->item;
-
-    free(old);
-    old = NULL;
-
-    return(item);
+// Removes the top item
+ITEM *StackPop(STACK *stack) {
+	if (stack == NULL || stack->top == NULL) {
+		return NULL;
+	}
+	
+	// Save item
+	NODE *top = stack->top;
+	ITEM *item = top->item;
+		
+	// Adjust pointer
+	stack->top = top->next;
+	stack->size--;
+	
+	// Remove node (keep the item!)
+	free(top);
+	
+	return item;
 }
 
-ITEM *stack_peek(STACK *stack) {
-    if (stack_is_empty(stack)) {
-        fprintf(stderr, "ERROR: The stack is empty!\n");
-        return(NULL);
-    }
-
-    return(stack->top->item);
+// Peeks the top item
+ITEM *StackPeek(STACK *stack) {
+	if (stack == NULL || stack->top == NULL) {
+		return NULL;
+	}
+	
+	return stack->top->item;
 }
 
-void stack_print(STACK *stack) {
-    if (stack_is_empty(stack)) {
-        fprintf(stderr, "ERROR: The stack is empty!\n");
-        return;
-    }
-
-    printf("Stack {\n");
-    printf("  - size: %d\n", stack->size);
-    printf("  - items (keys): [ ");
-    
-    NODE *next = stack->top;
-    while(next != NULL) {
-        if (next != NULL) {
-            printf("%d ", item_get_key(next->item));
-        }
-
-        next = stack->top->next;
-    }
-
-    free(next);
-
-    printf("]\n");
-    printf("}\n");
+// Returns the stack size
+int StackSize(STACK *stack) {
+	if (stack == NULL) {
+		return -1;
+	}
+	
+	return stack->size;
 }
-
-void stack_reverse(STACK *stack) {
-    if (stack == NULL) {
-        return;
-    }
-}
-
 ```

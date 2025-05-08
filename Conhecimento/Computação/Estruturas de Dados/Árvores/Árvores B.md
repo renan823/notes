@@ -7,7 +7,7 @@ O número $m$ dita o máximo de registros por nó, sendo definido previamente. C
 ![[arvore-b.png]]
 
 ### Funcionamento
-Árvores B são estruturas usadas na [[Organização de Arquivos]], por serem extremamente versáteis para armazenar dados em memória secundária.
+Árvores B são estruturas usadas na criação de [[Índices]], por serem extremamente versáteis para armazenar dados em memória secundária.
 
 Aqui, cada nó é chamado página. Cada página contém até $m-1$ chaves (preferencialmente ordenados) juntamente de seus valores. 
 
