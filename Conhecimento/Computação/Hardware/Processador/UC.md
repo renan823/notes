@@ -2,9 +2,9 @@
 
 ### Sinais de controle
 - ALUsrc: Segunda entrada da ULA: 0 -> registradores ou 1 -> imediato
-- ALUop: 
-- ImmSrc:
-- Branch: 0 -> beq ou 1 -> não beq
+- ALUop: Operação da ula, tartada na ALU control junto de f3/f7
+- ImmSrc: 
+- Branch: 0 -> branch ou 1 -> não branch
 - MemRead: 0 -> não lê memória de dados ou 1 -> lê memória de dados
 - MemWrite: 0 -> não escreve na mem. dados ou 1 -> escreve na mem. dados
 - MemToReg: 0 -> dados da ULA ou 1 -> dados da mem. dados

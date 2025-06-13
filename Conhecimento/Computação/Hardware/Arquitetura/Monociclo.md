@@ -7,4 +7,4 @@ Considerando o ciclo de clock como $45ns$
 
 Cada instrução é executada em um ciclo -> $100*4.5=4500ns$ 
 
-> Colocar grafico aqui!!!!
+![[monociclo.jpg]]

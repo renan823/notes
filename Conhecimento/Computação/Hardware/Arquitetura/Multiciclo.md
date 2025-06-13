@@ -23,7 +23,7 @@ Considerando o ciclo de clock como $10ns$ (da etapa mais demorada).
 
 Não é possível dizer exatamente o tempo de cada instrução, já que elas podem ter etapas variadas. Resolvemos isso utilizando uma média de tempo, que será $4.2ns$.
 
-São 100 instruções, cada qual usando 4,2. Temos que o número de ciclos necessários é $100*4.2$. Basta, então, multiplicar o tal de ciclos pelo tempo de cada ciclo -> $100*4.2*10 = 4200ns$  
+São 100 instruções, cada qual usando 4,2. Temos que o número de ciclos necessários é $100*4.2$. Basta, então, multiplicar o total de ciclos pelo tempo de cada ciclo -> $100*4.2*10 = 4200ns$  
 
 > Colocar grafico aqui!!!!
 
