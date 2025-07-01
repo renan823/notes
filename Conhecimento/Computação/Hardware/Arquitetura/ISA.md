@@ -1,4 +1,3 @@
-
 É a **Instruction Set Architecture** .
 
 Para definir um arquitetura, é necessário:

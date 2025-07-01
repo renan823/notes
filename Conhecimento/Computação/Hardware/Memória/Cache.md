@@ -5,7 +5,10 @@
 Possui método de acesso associativo, buscando dados pelo conteúdo e não por endereço.
 Está presente dentro da [[CPU]], com cada nível mais perto sendo um subnível do nível anterior.
 
-> Arquiteturas modernas possuem L1, L2 e L3, respectivamente, da mais perto à mais distante do processador.
+Caches podem ser **splited**, ou seja, com áreas diferentes para dados e instruções, ou **unified**, onde não há tal divisão.
+
+> Arquiteturas modernas possuem L1, L2 e L3, respectivamente, da mais perto à mais distante do processador. 
+> Caches L1 geralmente são **splited**.
 
 ### Princípios de localidade
 
@@ -29,7 +32,6 @@ O dado não é encontrado na cache -> miss rate: taxa de falha
 ##### Penalidade por falha
 Tempo necessário para buscar um bloco de um nível inferior para um nível superior, incluindo o tempo de transferência entre os níveis e da inserção no nível que ocorreu a falta.
 
-
 ### Implementação
 - Tamanho da cache: deve unir desempenho, custo e capacidade de armazenamento.
 - Tamanho do bloco: princípio da localidade espacial (bloco maior, maior acerto)
@@ -52,8 +54,41 @@ Existem diferentes métodos para aplicar a substituição, visando sempre a perm
 - LFU (least frequently used): Remove blocos usados com menos frequência. Cada linha possui um contador de quantas vezes foi utilizada (atualizado a cada acesso);
 - LRU (least recently used): Remove blocos usados a mais tempo. Armazena um contador global e salva na linha o "momento" de uso (atualizado a cada acesso).
 
+##### Políticas de escrita
+Indicam como proceder após um dado ser atualizado pela CPU.
 
-##### Mapeamento Direto
+Ocorrem em dois modos:
+- Write hit: dado está na cache
+- Write miss: dado não está na cache
+
+>Em um processador, os diferentes níveis de cache podem ter diferentes políticas de escrita
+
+###### Write Through
+Ocorre em **write hit**.
+Atualiza o dado na cache e no nível inferior.
+
+###### Write Back
+Ocorre em **write hit**.
+Apenas atualiza o nível inferior quando a linha for substituída.
+Utiliza o bit de modificação para detectar as mudanças.
+
+###### Write No Allocate
+Ocorre em **write miss**.
+Escreve a atualização do dado no local em que encontrá-lo, sem levá-lo para níveis superiores. 
+
+> Caso encontre o dado apenas na RAM, por exemplo, é ali (e apenas ali) que a atualização ocorrerá
+
+###### Write Allocate
+Ocorre em **write miss**.
+Busca o dado - se necessário, da RAM - e preenche os níveis de cache. Em seguida, executa o **write hit** (a depender da política implementada no write hit - write through ou back).
+
+
+##### Funções de Mapeamento
+Responsáveis por identificar e mapear blocos da RAM para a cache, tendo em vista a menor capacidade da cache, que não comporta todos os blocos da RAM.
+
+>Em um processador, os diferentes níveis de cache podem ter diferentes funções para mapeamento.
+
+###### Mapeamento Direto
 ![[cache_direct.png]]
 
 Mapeia cada bloco para a mesma linha da cache. 
@@ -73,7 +108,7 @@ Cada valor enviado a chace será quebrado, e os bits serão usados para identifi
 
 A busca é feita comparando o índice dado, a tag presente no índice e a tag que está sendo buscada. 
 
-##### Mapeamento totalmente associativo
+###### Mapeamento totalmente associativo
 ![[cache_total.png]]
 
 Permite que qualquer linha da RAM seja mapeada para qualquer linha da cache.
@@ -83,17 +118,21 @@ O campo "índice" não é necessário na cache.
 
 > Por permitir que qualquer bloco esteja em qualquer linha, os casos de colisão são tratados usando o algoritmo escolhido e assim evita-se a substituição de um bloco importante, por exemplo.
 
-A busca é feita comparando a tag de busca com **todas** as tags presentes na cache. Esse método é muito custoso.
+A busca é feita comparando a tag de busca com **todas** as tags presentes na cache. 
+Esse método de busca é muito custoso.
 
-##### Mapeamento associativo por conjuntos
+###### Mapeamento associativo por conjuntos
+![[cache_set.png]]
+
 Une o melhor dos dois outros modos de mapeamento.
 
 Permite um mapeamento direto para cada set (conjunto).
 Dentro dos conjuntos, o mapeamento é totalmente associativo.
 
-A cache deve possuir $N$ conjuntos, cada qual com o mesmo número de linhas dos outros.
+A cache deve possuir $V$ conjuntos, cada qual com $K$ linhas (k-way)
 
 > Por permitir a união do que há de melhor nos outros mapeamentos, esse é o que realmente é implementado.
 
 Na busca, o bloco desejado é comparado com o set, e dentro do set a tag é buscada (comparada com todas as tags daquele set).
-A busca é direta para o conjunto, mas exige comparar todas as tags ali dentro.
+
+A busca é direta para o conjunto, mas exige comparar todas as tags dentro do conjunto.

@@ -1,8 +1,7 @@
+É o processo aplicado na [[Compressão de Imagens]] e [[Compressão de Áudio]] para reduzir a precisão de certos valores.
 
-Processo utilizado no processo JPEG para compressão.
+A quantização elimina (ou deixa muito próximo de zero) altas frequências, usando para isso valores maiores na divisão.
 
-É o processo de receber uma matriz de dados (geralmente proveniente da DCT) e dividir por uma tabela de **luminância** e outra de **crominância**.
+Em processo envolvendo imagens, é a quantização a responsável por remover valores que não são percebidos pelo olho humano.
 
-JPEG define duas tabelas padrão para luz e cor.
-
-A quantização ocorre principalmente nos coeficientes AC.
+Em processos com áudio, permite digitalizar um sinal analógico adaptando-o para um faixa de bits
