@@ -2,7 +2,6 @@ A força gravitacional representa a interação entre dois corpos, dependendo de
 
 Isaac Newton identificou e explorou a ação dessa força nos corpos, permitindo uma melhor compreensão do tal fenômeno que faz maçãs caírem.
 
->[!Danger] COLOCAR DESENHO AQUI
 
 A força exercida entre as partículas faz com elas sejam atraídas umas para as outras.
 

@@ -56,9 +56,5 @@ Para simplificar ainda mais, podemos reduzir o produto vetorial de um vetor com 
 ## $$\vec{a} \times \vec{v} = 0+\kappa v²v$$
 Então:
 ## $$|\kappa| = \frac{||\vec{a}\times \vec{v}||}{||v||³}$$
-### Torção
 
-
-
-### Distância percorrida
 

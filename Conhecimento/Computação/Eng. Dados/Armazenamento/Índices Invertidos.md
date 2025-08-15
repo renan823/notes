@@ -1,1 +1,0 @@
-São modificações do [[Índices]]. Usam [[Árvores KD]]
