@@ -18,7 +18,7 @@ Esse estado atua como uma [[Máquina de Estados]], trocando entre cada tipo de e
 - RUNNING: processo em execução;
 - BLOCKED: processo que foi bloqueado por alguma operação (por exemplo, IO).
 
-// Desenho aqui
+![[process_states.png]]
 
 A troca entre estes estados é controlada pelo **sistema de escalonamento**.
 Processos prontos são escolhidos para usarem a [[CPU]], e enquanto um executa, os outros aguardam.
@@ -67,7 +67,7 @@ O problema mais comum no algoritmo Round Robin **é definir o tamanho do quantum
 - Intervalos muito curtos fazem com que a CPU gaste muito tempo (proporcionalmente) trocando entre processos.
 - Intervalos muito grandes podem aumentar o tempo ocioso da CPU e fazer com que usuários esperam mais tempo por uma resposta.
 
-// Desenho aqui
+![[round_robin.png]]
 
 ##### Escalonamento por prioridade
 Algoritmo que aplica diferentes prioridades entre os processos, fazendo aqueles com maior prioridade serem executados por mais tempo e/ou mais frequentemente.
@@ -80,4 +80,4 @@ Para evitar problemas com uma execução indefinidamente grande, a prioridade do
 É conveniente agrupar processos pelas suas prioridades, organizando-os de modo que cada prioridade tenha uma fila de processos prontos.
 O algoritmo de prioridades gerencia a tabela de prioridades, enquanto o algoritmo Round Robin gerencia cada um das filas (individualmente) para cada prioridade.
 
-// Desenho aqui
+![[prioruty_scheduling.png]]
