@@ -1,5 +1,7 @@
 No contexto de [[Sistemas Operacionais]], um processo indica um **programa em execução, junto de suas variáveis, espaço de memória e contexto**.
 
+> Um processo é uma **abstração** para o programa em execução
+
 Quando um programa inicia sua execução, o SO separa um pedaço da [[Memória RAM]] para armazená-lo. Ali, estarão dados, instruções e demais informações relacionados ao programa.
 
 → É importante ressaltar que processos são independentes e **não devem acessar os contextos uns dos outros!**
@@ -8,7 +10,11 @@ Processos são algum tipo de atividade. Com um programa, estados, input e output
 Um **único processador será compartilhado entre múltiplos processos**, a depender de um algoritmo para escalonar e coordenar as execuções.
 
 > A execução de múltiplos programas é chamada de multiprogramação.
-> Essa técnica dos computadores modernos permite **trocar processos em execução por outros**, dando a impressão de paralelismo (nesse caso, pseudoparalelismo, ou concorrência).
+> Essa técnica, dos computadores modernos (que possuem reentrância), permite **trocar processos em execução por outros**, dando a impressão de paralelismo (nesse caso, pseudoparalelismo, ou concorrência).
+> **Se houver hardware para paralelismo, tudo já estará pronto para ser executado em paralelo.**
+
+
+![[paralelis_concurrency.png]]
 
 ### Estados
 Um processo depende de seu estado atual para ser executado.
