@@ -16,6 +16,11 @@ Um **único processador será compartilhado entre múltiplos processos**, a depe
 
 ![[paralelis_concurrency.png]]
 
+Processos podem ser I/O bound: passam a maior parte do tempo aguardando ações de I/O, como disco ou rede.
+Ou CPU bound: dependem dos ciclos de CPU, com processamento mais intensivo.
+
+> É importante balancear diferentes tipos de processos, para evitar sobrecarga e ócio de componentes.
+
 ### Estados
 Um processo depende de seu estado atual para ser executado.
 Esse estado atua como uma [[Máquina de Estados]], trocando entre cada tipo de estado em dada ação.
@@ -87,3 +92,13 @@ Para evitar problemas com uma execução indefinidamente grande, a prioridade do
 O algoritmo de prioridades gerencia a tabela de prioridades, enquanto o algoritmo Round Robin gerencia cada um das filas (individualmente) para cada prioridade.
 
 ![[prioruty_scheduling.png]]
+
+##### Escalonamento por múltiplas filas
+Algoritmo que permite criar processos com diferentes valores para o quantum, agrupando valores iguais nas mesmas filas.
+
+Essa abordagem permite que um processo que demore 100 quantum, por exemplo, não precise ser executado 100 vezes nos ciclos de 1 quantum. Para evitar isso, o algoritmo aumenta o quantum de processos longos, em 2, 4, 8, etc.
+Desse modo, em 7 escalonamentos, o processo de 100 quantum já seria executado.
+
+> Essa abordagem permite otimizar processos mais longos, evitando trocas de contexto e aumentado o throughput.
+
+![[multiple_queues.png]]
