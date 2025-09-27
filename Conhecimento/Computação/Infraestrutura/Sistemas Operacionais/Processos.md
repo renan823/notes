@@ -45,6 +45,7 @@ As ações provocam a mudança entres os estados:
 - `suspend`: Remove o processo de execução, devolvendo-o para a fila;
 - `destroy`: Libera a memória correspondente ao processo.
 
+---
 ### Escalonamento
 A organização e coordenação de processos é essencial para o bom funcionamento dos computadores com multiprogramação.
 
@@ -65,6 +66,7 @@ Os algoritmos que consideram a multiprogramação, suspendendo e trocando execu�
 
 >As trocas de contextos entre processos são custosas, e devem ser otimizadas para garantir uma melhor eficiência do sistema.
 
+---
 ##### Escalonamento Round Robin
 É o algoritmo mais tradicional aplicado em escalonadores. Cada processo receberá um tempo de execução chamado `quantum` e será colocado numa fila.
 
@@ -80,6 +82,7 @@ O problema mais comum no algoritmo Round Robin **é definir o tamanho do quantum
 
 ![[round_robin.png]]
 
+---
 ##### Escalonamento por prioridade
 Algoritmo que aplica diferentes prioridades entre os processos, fazendo aqueles com maior prioridade serem executados por mais tempo e/ou mais frequentemente.
 
@@ -93,6 +96,7 @@ O algoritmo de prioridades gerencia a tabela de prioridades, enquanto o algoritm
 
 ![[prioruty_scheduling.png]]
 
+---
 ##### Escalonamento por múltiplas filas
 Algoritmo que permite criar processos com diferentes valores para o quantum, agrupando valores iguais nas mesmas filas.
 
