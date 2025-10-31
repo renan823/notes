@@ -106,3 +106,10 @@ Desse modo, em 7 escalonamentos, o processo de 100 quantum já seria executado.
 > Essa abordagem permite otimizar processos mais longos, evitando trocas de contexto e aumentado o throughput.
 
 ![[multiple_queues.png]]
+
+---
+
+##### Escalonamento mais curto primeiro
+Uso principalmente em sistemas batch.
+
+Consiste, basicamente, em ordenar a lista de processos pelo menor tempo de execução.

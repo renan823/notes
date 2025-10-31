@@ -124,5 +124,18 @@ A operação **up** incrementa o valor do contador. E, caso existam processos bl
 
 → Usar semáforos requer cuidado, afinal, operações desordenadas geram códigos imprevisíveis e irreprodutíveis (problemas!!)
 
+---
 #### Monitores
-Monitores surgem com a ideia de escrever códigos seguros para 
+Monitores surgem com a ideia de escrever códigos seguros para multiprocessamento.
+
+Monitores são **coleções de procedimentos, variáveis e estruturas de dados**, agrupadas em um tipo de pacote.
+
+Processos podem chamar precedimentos dos monitores como quiserem, **mas jamais acessar diretamente os dados internos**.
+
+> Para evitar race conditions, **apenas um processo pode estar ativo no monitor em um dado instante**.
+
+Monitores verificam se já existe algum processo trabalhando neles e, em caso positivo, colocam o novo processo que está tentando acessá-lo em bloqueio.
+
+> Monitores podem ser implementados utilizando **semáforos binários**.
+
+Nos monitores, as operações `signal` e `wait` funcionam de modo similar às utilizadas nos semáforos. Aqui, entretanto, existe uma exclusão mútua que impede os erros comuns que ocorreriam em `sleep` e `wakeup`.
