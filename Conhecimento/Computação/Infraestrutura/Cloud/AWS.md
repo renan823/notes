@@ -1,4 +1,4 @@
-**Amazon Web Services** são o conjunto de serviços oferecidos pela Amazon em sua plataforma de [[Cloud]]. As solução são muito diversas, com servidores, SaaS e até bancos de dados.
+**Amazon Web Services** são o conjunto de serviços oferecidos pela Amazon em sua plataforma de [[Cloud Computing]]. As solução são muito diversas, com servidores, SaaS e até bancos de dados.
 
 A AWS foi criado inicialmente para atender as demandas internas da própria Amazon, primeiramente com o S3 e o EC2. 
 A aplicação foi oferecida para o mercado externo pelo método "pay-as-you-go", ou seja, pague apenas por aquilo que está usando.
