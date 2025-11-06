@@ -8,13 +8,13 @@ Características desejáveis:
 - Rápida
 - Baixo custo
 
--> São características conflitantes!
+→ São características conflitantes!
 
 
 ### Hierarquia de Memória
 Tenta resolver o problemas das características desejáveis na memória, adaptando cada vantagem para usos específicos dentro do computador.
 
-> IMAGEM DA PIRAMIDE DE MEMORIA
+
 
 Topo -> armazenamento na placa: registradores, cache e RAM;
 Meio -> fora da placa: HD | SSD | Flash e CD | DVD;
