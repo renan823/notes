@@ -1,1 +1,1 @@
-São cadeias de [[Aminoácidos]] que apresentam diversas funções metabólicas, como anticorpos ([[Imunoglobulinas]]), [[Enzimas]], função estrutural e horminal.
+São cadeias de [[Aminoácidos]] que apresentam diversas funções metabólicas, como anticorpos ([[Imunoglobulinas]]), [[Enzimas]], função estrutural e hormonal.

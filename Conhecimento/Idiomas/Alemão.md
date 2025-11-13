@@ -36,7 +36,46 @@ A pronuncia de algumas letras/conjunto de letras soa um pouco diferente do que e
 - m - sempre com lábio fechado (dem - demm)
 - n - sempre no céu da boca (kommen)
 
--> Vogais no final de palavras são pronunciadas de modo forte
--> Consoantes no final de palavras são muitos secas (não adicionamos a vogal da fala)
+→ Vogais no final de palavras são pronunciadas de modo forte
+→ Consoantes no final de palavras são muitos secas (não adicionamos a vogal da fala)
 
+### Alimentos
+Apfel → Maça
+Orange → Laranja
+Wasser → Água
+Wein → Vinho
+Kaffee → Café
+Schokolade → Chocolate
+Küchen → Bolo
+Gemüse → Vegetais
+Karotte / Möhre → Cenoura
+Paprika →Pimentão
+Lauch → Alho poró
+Weintraube → Uva
+Milch → Leite
+Joghurt → Iogurte
+Butter → Manteiga
+Kirsche → Cereja
+Erdbeere → Morango
+Himbeere → Framboesa
+Brot → Pão
+Kartoffel → Batata
+Käse → Queijo
+Brezel → Pretzel
+Frischkäse → Cream cheese
+Salz und Pfeffer → Sal e pimenta
+Kartoffelbrot → Pão de batata
 
+### Exemplo de dialogo
+
+> Hey! Bist du die neue Studentin?
+
+> Ja, stimmt. Es ist mein ersten Tag.
+
+> Cool. Wie heißt du?
+
+> Ich heiße Luise.
+
+> Luise. Schöner name. Und woher kommst du?
+
+> Aus Brasilien.
